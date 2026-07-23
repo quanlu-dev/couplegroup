@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="vi" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Couple Group - Kiêu hãnh Vươn xa</title>
+<!-- BEGIN: Typography & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<!-- END: Typography & Icons -->
+<!-- BEGIN: Tailwind CSS & Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#002a58",
+            "deep-navy": "#004080",
+            "dynamic-pink": "#E6007E",
+            "ink-black": "#1A202C",
+            "soft-white": "#FFFFFF",
+            "surface": "#f8f9fa",
+            "surface-bright": "#f8f9fa",
+            "on-surface": "#191c1d",
+            "on-surface-variant": "#424750",
+            "outline-variant": "#c3c6d2",
+            "slate-gray": "#4A5568",
+            "secondary-container": "#e2007c",
+            "secondary-fixed": "#ffd9e2",
+            "on-secondary-fixed-variant": "#8e004b",
+            "primary-fixed": "#d6e3ff",
+            "surface-container-high": "#e7e8e9",
+            "surface-container-highest": "#e1e3e4",
+            "surface-container-low": "#f3f4f5"
+          },
+          fontFamily: {
+            'montserrat': ['Montserrat', 'sans-serif'],
+            'inter': ['Inter', 'sans-serif'],
+            'display-lg': ['Montserrat'],
+            'headline-lg': ['Montserrat'],
+            'body-lg': ['Inter'],
+            'label-md': ['Inter']
+          },
+          maxWidth: {
+            'container-max': '1280px'
+          },
+          spacing: {
+            'margin-desktop': '40px'
+          }
+        }
+      }
+    }
+  </script>
+<!-- END: Tailwind CSS & Config -->
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="animations">
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .shimmer-overlay {
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite linear;
+    }
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .hero-title-entrance {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+<style data-purpose="typography-fine-tuning">
+    .editorial-text {
+      letter-spacing: -0.01em;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-surface text-on-surface font-inter antialiased overflow-x-hidden">
+<!-- BEGIN: Navigation -->
+<header class="fixed top-0 w-full z-[100] transition-all duration-500 ease-in-out glass-nav border-b border-outline-variant/10 py-4 bg-white/80" id="main-header">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center group cursor-pointer">
+<img alt="Couple Group Logo" class="w-auto h-12 object-contain" src="logo-removebg-preview.png"/>
+<span class="ml-3 font-montserrat text-2xl font-bold text-ink-black tracking-tight">Couple Group</span>
+</div>
+<nav class="hidden md:flex space-x-8">
+<a class="text-[14px] font-bold text-ink-black border-b-2 border-dynamic-pink pb-1 hover:text-dynamic-pink transition-all duration-300" href="#">Trang chủ</a>
+<a class="text-[14px] font-medium text-ink-black border-b-2 border-transparent hover:border-dynamic-pink/30 hover:text-dynamic-pink transition-all duration-300" href="thanhvien.html">Thành viên</a>
+<a class="text-[14px] font-medium text-ink-black border-b-2 border-transparent hover:border-dynamic-pink/30 hover:text-dynamic-pink transition-all duration-300" href="vanhoa.html">Văn hóa</a>
+<a class="text-[14px] font-medium text-ink-black border-b-2 border-transparent hover:border-dynamic-pink/30 hover:text-dynamic-pink transition-all duration-300" href="foundation.html">Quỹ cộng đồng</a>
+<a class="text-[14px] font-medium text-ink-black border-b-2 border-transparent hover:border-dynamic-pink/30 hover:text-dynamic-pink transition-all duration-300" href="tintuc.html">Tin tức</a>
+<a class="text-[14px] font-medium text-ink-black border-b-2 border-transparent hover:border-dynamic-pink/30 hover:text-dynamic-pink transition-all duration-300" href="https://couplegroup.jobday.vn/">Tuyển dụng</a>
+</nav>
+</div>
+</header>
+<!-- END: Navigation -->
+<main>
+<!-- BEGIN: Hero Section -->
+<section class="relative flex flex-col lg:flex-row items-center justify-start overflow-hidden bg-white pt-32 pb-16 lg:py-44 h-auto lg:h-[700px]">
+<div class="relative lg:absolute lg:top-[110px] lg:-right-[80px] w-full lg:w-2/3 h-auto lg:h-[calc(100%-110px)] z-0 rounded-2xl lg:rounded-l-[40px] overflow-hidden order-2 lg:order-none mt-12 lg:mt-0">
+<video autoplay="" class="w-full h-full object-contain" loop="" muted="" playsinline="">
+<source src="videotrangchu.mp4" type="video/mp4"/>
+</video>
+</div>
+<div class="container mx-auto px-margin-desktop relative z-10 order-1 lg:order-none">
+<div class="max-w-2xl hero-title-entrance text-left ml-0">
+<span class="inline-block px-4 py-1 bg-dynamic-pink text-white rounded-full font-bold mb-8 tracking-[0.2em] uppercase text-[10px]">Tiên phong Phong cách sống</span>
+<h1 class="font-montserrat text-[32px] lg:text-[40px] font-extrabold mb-8 leading-[1.1] editorial-text uppercase text-[#243447]">
+            COUPLE GROUP<br/>
+<span class="text-dynamic-pink italic">Kiêu hãnh đồng hành</span><div><span class="text-dynamic-pink italic">Bền bỉ Vươn xa</span>
+</div></h1>
+<div class="flex flex-wrap gap-5 justify-start">
+<button class="bg-dynamic-pink text-white px-8 py-4 rounded-lg font-bold hover:shadow-[0_15px_30px_rgba(230,0,126,0.4)] hover:-translate-y-1 transition-all duration-300">
+              Khám phá Hệ sinh thái
+            </button>
+<button class="bg-deep-navy/5 border border-deep-navy/20 text-deep-navy px-8 py-4 rounded-lg font-bold hover:bg-deep-navy hover:text-white hover:-translate-y-1 transition-all duration-300">
+              Câu chuyện của chúng tôi
+            </button>
+</div>
+</div>
+</div>
+<!-- Floating Decorative Images -->
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: About Us -->
+<section class="py-32 bg-surface-bright reveal active">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center mb-32">
+<div class="space-y-8">
+<span class="inline-block px-4 py-1.5 bg-secondary-fixed/50 text-on-secondary-fixed-variant text-[12px] rounded-full uppercase tracking-[0.2em] font-bold">Câu chuyện Couple Group</span>
+<h2 class="font-montserrat text-[36px] font-bold text-ink-black leading-tight">Từ một ý tưởng khác biệt … đến hệ sinh thái truyền cảm hứng sống cho thế hệ mới.</h2>
+<p class="text-[16px] text-on-surface-variant leading-relaxed editorial-text opacity-90">
+    Hành trình của Couple Group bắt đầu từ thương hiệu đầu tiên – Couple TX.
+    Ngày 11/07/2009, Couple TX ra đời như một dấu mốc mở đường, không chỉ là sự khởi đầu của một thương hiệu thời trang, mà còn là hạt giống đầu tiên gieo nền móng cho cả một hệ sinh thái sau này. 
+    Ngay từ thuở ban đầu, Couple TX đã mang trong mình một khát vọng lớn: biến thời trang thành phong cách sống.
+    Từ một cửa hàng nhỏ, Couple TX tiên phong bán hàng trực tuyến, xây dựng nhà máy riêng để làm chủ chất lượng và mở rộng thành một hệ sinh thái thời trang toàn diện.
+    Hành trình ấy không chỉ là mở rộng quy mô, mà còn là sự khẳng định một tinh thần:
+    “Thời trang phải gắn liền với trải nghiệm sống của mỗi người”
+</p>
+</div>
+<div class="relative group">
+<div class="absolute -inset-6 bg-deep-navy/5 rounded-[2rem] blur-3xl transition-all duration-700 group-hover:bg-deep-navy/10"></div>
+<img alt="Creative Collaborative Office" class="relative rounded-2xl shadow-2xl w-full transition-transform duration-700 group-hover:scale-[1.01]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCArOQSp7a4RWhU4I2vv7vZmEjkFb0DIUyX6P11M1RP9yWV1xi5Y3erR5ZRxa0UuiYkS6Pasw1VqZnqp4p0XbA7ZI8wEpr2x00wS1zcErI5aD2wLhRK1TRLmhYHOR7Uzwus-fulVoelvPTC6AT5JgydZSrXGcbLZrJvrhtisINmQnQEDCdi7uUp6WLgP4CCkhs5qAVfjWCzxiqQlB_JVNT2Sd3uJvNwboZuI57uotunrHvtoZ6Qwlr9w4CTJNTcKdAJdQS5Gs3EZSc"/>
+</div>
+</div>
+<!-- Timeline -->
+<div class="text-center mb-20">
+<h2 class="font-montserrat text-[32px] font-bold mb-6 text-ink-black">Hành trình phát triển</h2>
+<div class="w-24 h-1.5 bg-gradient-to-r from-dynamic-pink to-secondary-container mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+<div class="md:col-span-2 p-10 bg-white rounded-2xl border border-outline-variant/20 flex flex-col justify-between hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group">
+<div>
+<span class="text-6xl font-bold text-slate-gray/10 mb-6 block group-hover:text-dynamic-pink/20 transition-colors">2009</span>
+<h3 class="font-montserrat text-[24px] font-bold mb-4 text-ink-black">Khởi nghiệp</h3>
+<p class="text-on-surface-variant editorial-text">Mở cửa hàng đầu tiên – khởi động chiến lược bán lẻ thời trang dành cho giới trẻ.</p>
+</div>
+</div>
+<div class="p-10 bg-deep-navy text-soft-white rounded-2xl flex flex-col justify-between hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+<span class="text-[24px] font-bold mb-6 block border-b border-white/20 pb-4">2013</span>
+<p class="text-[14px] opacity-90 leading-relaxed">Thành lập nhà máy sản xuất riêng, làm chủ chuỗi cung ứng từ thiết kế đến chất lượng đầu ra.</p>
+</div>
+<div class="p-10 bg-dynamic-pink text-soft-white rounded-2xl flex flex-col justify-between hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+<span class="text-[24px] font-bold mb-6 block border-b border-white/20 pb-4">2019</span>
+<p class="text-[14px] opacity-90 leading-relaxed">Tái định vị thương hiệu: từ “cặp đôi hồn nhiên” đến hình ảnh bản lĩnh, trưởng thành.</p>
+</div>
+<div class="md:col-span-2 lg:col-span-1 p-10 bg-white rounded-2xl border border-outline-variant/20 flex flex-col justify-between hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+<div>
+<span class="text-[24px] font-montserrat font-bold text-deep-navy mb-6 block border-b border-outline-variant/10 pb-4">2024</span>
+<p class="text-on-surface-variant editorial-text">Chính thức vận hành mô hình OMO (Online Merge Offline) – cá nhân hóa trải nghiệm khách hàng từ online đến offline.</p>
+</div>
+</div>
+<div class="md:col-span-3 p-10 bg-surface-container-highest/50 rounded-2xl border border-outline-variant/20 flex flex-col md:flex-row items-center gap-10 hover:shadow-2xl transition-all duration-500">
+<div class="hidden sm:block flex-shrink-0">
+<img alt="Modern Office Lifestyle" class="w-56 h-35 rounded-xl object-contain shadow-lg" src="hanhtrinh.jpg"/>
+</div>
+<div class="space-y-4">
+<span class="text-[24px] font-bold text-deep-navy block">2024 - Nay</span>
+<h4 class="font-bold text-[24px] font-montserrat text-ink-black">Chuyển đổi số &amp; Bền vững</h4>
+<p class="text-on-surface-variant editorial-text leading-relaxed">Tập trung vào ứng dụng công nghệ 4.0 và quy trình sản xuất thân thiện với môi trường để kiến tạo giá trị dài hạn.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: About Us -->
+<!-- BEGIN: Vision & Mission -->
+<section class="relative w-full overflow-hidden bg-deep-navy text-soft-white py-20 reveal active">
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<div class="w-full h-full bg-[radial-gradient(circle_at_30%_50%,_rgba(0,64,128,1)_0%,_rgba(0,42,88,1)_50%,_rgba(0,27,61,1)_100%)]"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="flex flex-col gap-20">
+<!-- =================== TẦM NHÌN =================== -->
+<div class="group">
+<div class="flex items-center gap-6 mb-8">
+<div class="w-16 h-16 rounded-2xl bg-white/5 backdrop-blur-md flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed">
+                    rocket_launch
+                </span>
+</div>
+<h2 class="font-montserrat text-[32px] font-bold text-soft-white">
+                Tầm nhìn
+            </h2>
+</div>
+<div class="border-l-4 border-dynamic-pink pl-8"><div class="flex flex-col items-center mb-20">
+<div class="relative group/parent mb-8">
+<div class="absolute -inset-4 bg-dynamic-pink/20 rounded-2xl blur-xl opacity-0 group-hover/parent:opacity-100 transition-opacity duration-500"></div>
+<img alt="Couple Group" class="h-32 relative z-10" src="logo-removebg-preview.png"/>
+</div>
+<p class="text-[20px] md:text-[24px] font-montserrat font-bold text-white text-center max-w-2xl leading-tight">
+    Có thị phần thời trang số 1 tại thị trường Việt Nam
+  </p>
+<div class="w-px h-16 bg-gradient-to-b from-dynamic-pink to-transparent mt-8 hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-px bg-white/10 hidden md:block"></div>
+<div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-500 group/card">
+<div class="flex flex-col items-center text-center space-y-6">
+<img alt="Couple TX" class="h-16 object-contain" src="logo-coupletx.webp"/>
+<div class="space-y-2">
+<h4 class="font-montserrat font-bold text-white text-lg">Couple TX</h4>
+<p class="text-soft-white/70 text-[14px] leading-relaxed">Mở rộng đến 8 quốc gia Đông Nam Á</p>
+</div>
+</div>
+</div>
+<div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-500 group/card">
+<div class="flex flex-col items-center text-center space-y-6">
+<img alt="Trường Thắng" class="h-16 object-contain" src="logo-coupletx.webp"/>
+<div class="space-y-2">
+<h4 class="font-montserrat font-bold text-white text-lg">Trường Thắng</h4>
+<p class="text-soft-white/70 text-[14px] leading-relaxed">Là nhà sản xuất FOB hàng đầu</p>
+</div>
+</div>
+</div>
+<div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-500 group/card">
+<div class="flex flex-col items-center text-center space-y-6">
+<img alt="EpicSport" class="h-16 object-contain" src="logo-epic.webp"/>
+<div class="space-y-2">
+<h4 class="font-montserrat font-bold text-white text-lg">EpicSport</h4>
+<p class="text-soft-white/70 text-[14px] leading-relaxed">Lan tỏa phong cách sống năng động thông qua thời trang thể thao</p>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+<!-- =================== SỨ MỆNH =================== -->
+<div class="group">
+<div class="flex items-center gap-6 mb-8">
+<div class="w-16 h-16 rounded-2xl bg-white/5 backdrop-blur-md flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed">visibility</span>
+</div>
+<h2 class="font-montserrat text-[32px] font-bold text-soft-white">
+                Sứ mệnh
+            </h2>
+</div>
+<div class="border-l-4 border-dynamic-pink pl-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+<!-- Card 1: Khách hàng -->
+<div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all duration-500 group/card">
+<div class="flex flex-col items-start space-y-4">
+<div class="w-10 h-10 rounded-lg bg-dynamic-pink/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-dynamic-pink">person</span>
+</div>
+<h4 class="font-montserrat font-bold text-white text-[14px] uppercase tracking-widest">Khách hàng</h4>
+<p class="text-soft-white/70 text-[14px] leading-relaxed editorial-text">Mang đến những sản phẩm thời trang ứng dụng công nghệ tiên tiến và dịch vụ vượt mong đợi</p>
+</div>
+</div>
+<!-- Card 2: Đối tác -->
+<div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all duration-500 group/card">
+<div class="flex flex-col items-start space-y-4">
+<div class="w-10 h-10 rounded-lg bg-dynamic-pink/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-dynamic-pink">handshake</span>
+</div>
+<h4 class="font-montserrat font-bold text-white text-[14px] uppercase tracking-widest">Đối tác</h4>
+<p class="text-soft-white/70 text-[14px] leading-relaxed editorial-text">Là bạn đồng hành đáng tin cậy trên mọi chặng đường</p>
+</div>
+</div>
+<!-- Card 3: Nhân viên -->
+<div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all duration-500 group/card">
+<div class="flex flex-col items-start space-y-4">
+<div class="w-10 h-10 rounded-lg bg-dynamic-pink/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-dynamic-pink">groups</span>
+</div>
+<h4 class="font-montserrat font-bold text-white text-[14px] uppercase tracking-widest">Nhân viên</h4>
+<p class="text-soft-white/70 text-[14px] leading-relaxed editorial-text">Tạo ra môi trường làm việc chuyên nghiệp, hiệu quả cao, đãi ngộ công bằng và cùng nhau thụ hưởng thành quả từ sự nỗ lực không ngừng của đội ngũ</p>
+</div>
+</div>
+<!-- Card 4: Cộng đồng xã hội -->
+<div class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all duration-500 group/card">
+<div class="flex flex-col items-start space-y-4">
+<div class="w-10 h-10 rounded-lg bg-dynamic-pink/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-dynamic-pink">public</span>
+</div>
+<h4 class="font-montserrat font-bold text-white text-[14px] uppercase tracking-widest">Cộng đồng xã hội</h4>
+<p class="text-soft-white/70 text-[14px] leading-relaxed editorial-text">Dung hòa lợi ích của công ty với trách nhiệm bảo vệ môi trường và đóng góp tích cực vào sự phát triển của cộng đồng xã hội</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- =================== GIÁ TRỊ CỐT LÕI =================== -->
+<div class="group">
+<div class="flex items-center gap-6 mb-8">
+<div class="w-16 h-16 rounded-2xl bg-white/5 backdrop-blur-md flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-4xl text-secondary-fixed">
+                    favorite
+                </span>
+</div>
+<h2 class="font-montserrat text-[32px] font-bold text-soft-white">
+                Giá trị cốt lõi
+            </h2>
+</div>
+<div class="border-l-4 border-dynamic-pink pl-8"><div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12"><!-- Left Column: Venn Diagram --><div class="relative flex justify-center items-center h-[400px] md:h-[500px]"><!-- Top Circle (Tử tế) --><div class="absolute top-0 w-48 h-48 md:w-64 md:h-64 rounded-full bg-[#ffd9e2]/80 backdrop-blur-sm flex flex-col items-center justify-center text-ink-black shadow-lg transition-transform hover:scale-105 duration-500 z-20"><div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/50 flex items-center justify-center mb-2"><span class="material-symbols-outlined text-dynamic-pink">favorite</span></div><span class="font-montserrat font-bold text-lg md:text-2xl">Tử tế</span></div><!-- Bottom Left Circle (Sáng tạo) --><div class="absolute bottom-10 left-0 md:left-10 w-48 h-48 md:w-64 md:h-64 rounded-full bg-[#ffdbcb]/80 backdrop-blur-sm flex flex-col items-center justify-center text-ink-black shadow-lg transition-transform hover:scale-105 duration-500 z-10"><div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/50 flex items-center justify-center mb-2"><span class="material-symbols-outlined text-[#773305]">lightbulb</span></div><span class="font-montserrat font-bold text-lg md:text-2xl">Sáng tạo</span></div><!-- Bottom Right Circle (Nhiệt huyết) --><div class="absolute bottom-10 right-0 md:right-10 w-48 h-48 md:w-64 md:h-64 rounded-full bg-[#d6e3ff]/80 backdrop-blur-sm flex flex-col items-center justify-center text-ink-black shadow-lg transition-transform hover:scale-105 duration-500 z-10"><div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/50 flex items-center justify-center mb-2"><span class="material-symbols-outlined text-deep-navy">local_fire_department</span></div><span class="font-montserrat font-bold text-lg md:text-2xl">Nhiệt huyết</span></div></div><!-- Right Column: Descriptions --><div class="space-y-10"><div class="space-y-2"><h4 class="font-montserrat font-bold text-2xl text-[#ffd9e2]">Tử tế</h4><p class="text-soft-white/80 text-lg leading-relaxed">Tôn trọng yếu tố con người, nhân văn trong suy nghĩ và hành động.</p></div><div class="space-y-2"><h4 class="font-montserrat font-bold text-2xl text-[#ffdbcb]">Sáng Tạo</h4><p class="text-soft-white/80 text-lg leading-relaxed">Luôn có sự đột phá, cải tiến được chấp nhận.</p></div><div class="space-y-2"><h4 class="font-montserrat font-bold text-2xl text-[#d6e3ff]">Nhiệt huyết</h4><p class="text-soft-white/80 text-lg leading-relaxed">Hết lòng, tận tâm với sứ mệnh của mình.</p></div></div></div></div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Vision & Mission -->
+<!-- BEGIN: Ecosystem -->
+<section class="py-32 bg-white px-margin-desktop reveal active">
+<div class="container mx-auto">
+<div class="mb-20">
+<h2 class="font-montserrat text-[32px] font-bold text-ink-black mb-6">Hệ sinh thái của chúng tôi</h2>
+<div class="w-24 h-1.5 bg-dynamic-pink rounded-full shadow-[0_4px_10px_rgba(230,0,126,0.3)]"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- Card 1: Couple TX -->
+<div class="group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-700 h-[600px]">
+<video autoplay="" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" loop="" muted="" playsinline="">
+<source src="coupletx.mp4" type="video/mp4"/>
+    Trình duyệt của bạn không hỗ trợ video.
+</video>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/95 via-deep-navy/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 text-white w-full">
+<h3 class="font-montserrat text-[24px] font-bold mb-4">Couple TX</h3>
+<p class="text-[16px] opacity-80 mb-8 editorial-text line-clamp-3">Thời trang đa năng, tối giản và thời thượng dành cho thế hệ trẻ Việt Nam hiện đại.</p>
+<a class="inline-flex items-center gap-3 text-white font-bold group/link relative" href="#">
+<span class="">Khám phá thêm</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-hover/link:translate-x-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Trường Thắng -->
+<div class="group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-700 h-[600px]">
+<img alt="Trường Thắng" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMdmrirnr8ieyW-riUKVwDIHkcDAKO7imNxhiWO68rpIjTL3PuDjGuofkYSYIA3odiCsaBuUuhgRGFiuBRs3vv3XAY_cjqmQKCNgO8qeiTbIxFLh_5mLBBwpx2DsKgHbkKWtQeqai5rNwX87Qs2NT4HfbShxXidPzGOWkvu5LxIpQJHKMBrQhfABNd9UOD8ZFaiMvCEfCy0yzlq_RQD9bS6seKMEA_Zjt79A5RQ3hiHEnmZIwGjq7kJFF7Om35PKGVwelHVYU1T5Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/95 via-deep-navy/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 text-white w-full">
+<h3 class="font-montserrat text-[24px] font-bold mb-4">Trường Thắng</h3>
+<p class="text-[16px] opacity-80 mb-8 editorial-text line-clamp-3">Sản xuất may mặc bền vững tập trung vào sự xuất sắc và tay nghề thủ công đạo đức.</p>
+<a class="inline-flex items-center gap-3 text-white font-bold group/link relative" href="#">
+<span class="">Khám phá thêm</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-hover/link:translate-x-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Epicsport -->
+<div class="group relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-700 h-[600px]">
+<img alt="Epicsport" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8bzgmDkYtN2f3oUXuzovw427kbrLaU6UghvpM2K-7keXdkuL-_JS-QnqZBoxxJOOIXKMAh76MgnqW_DYqJInu57mTdcIPs00_xwb3iG5hx6S0RDG1SRSEZIlzOYgxGylq-z9IjCYSs4VJXhbQpylPYPKdcxRotKkbzqX5DnqHhhBSAZsUA6roZOocB2tJSEcM0zBBd09_UUwb3_Fsxgozb5d3OBbHLt_yrVt-HDu70aisXlo_0ef7dlK3qrUJXhREO6lNiwawYA8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/95 via-deep-navy/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 text-white w-full">
+<h3 class="font-montserrat text-[24px] font-bold mb-4">Epicsport</h3>
+<p class="text-[16px] opacity-80 mb-8 editorial-text line-clamp-3">Đồ thể thao quốc tế mang các tiêu chuẩn hiệu suất toàn cầu đến Việt Nam.</p>
+<a class="inline-flex items-center gap-3 text-white font-bold group/link relative" href="#">
+<span class="">Khám phá thêm</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-hover/link:translate-x-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Ecosystem -->
+<!-- BEGIN: Foundation -->
+<section class="py-32 reveal active bg-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-montserrat text-[32px] font-bold text-ink-black mb-4">COUPLE GROUP DNA</h2>
+<div class="w-16 h-1 bg-dynamic-pink mx-auto mb-6"></div>
+<p class="text-[18px] text-slate-gray/60 max-w-3xl mx-auto font-inter">Những giá trị cốt lõi tạo nên bản sắc và sự phát triển bền vững của Couple Group.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+<!-- Card 1: CSR -->
+<div class="group relative rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-[450px] cursor-pointer">
+<img alt="CSR Photography" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLtlaWKk7u2YmJopgWYQUGArQji1x9QqvXgX6v9NZo4rzPXulEXVHtJUZC1mEUG-wS4LawLL1wirR9O3TM8k1Kso49uxh6Mqvq8oGmjcUzvcHSMmDPW_5rSQApt-nUZtTAgJw40sc23uNqd8bXHH8nFrFE2F_tBRAzTh8hxoPdrSTgW0pnTy_fY9VQBqd75Ak7F0QoDhmLw5FMJwc3sV3-m8HC8y83Wz3Perg2KFjcjGE_UXbG5zFmbw60I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-all duration-300 group-hover:from-black/80"></div>
+<span class="absolute top-8 left-8 bg-dynamic-pink text-white px-5 py-1.5 rounded-full text-[12px] font-bold tracking-widest transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">CSR</span>
+<div class="absolute bottom-8 left-8 right-8 transition-transform duration-300 group-hover:-translate-y-2">
+<h3 class="font-montserrat text-[28px] font-bold text-white mb-2">Trách nhiệm xã hội</h3>
+<p class="text-white/90 text-[15px] leading-relaxed editorial-text">Lan tỏa những giá trị tích cực đến cộng đồng thông qua các hoạt động thiện nguyện và phát triển bền vững.</p>
+</div>
+</div>
+<!-- Card 2: Swan Spirit -->
+<div class="group relative rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-[450px] cursor-pointer">
+<img alt="Swan Spirit Culture" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsUKcuVHCppI-6oY2HEAQSJS1q_-iLX7Bv7MpEVMQq2BIuam0zqpoPgvzJ_fW1T423E4evMAL5EIoyH3nLsYhHvxQi4FCR_kGlOsbI0KFz923oGniPJUzkDSeSvwJMaEX7fqgrC1lr-SbGFHwpu0P-BDne-OkPXy59i4ekkHcP6oUuVHsK92HK4y_Z96wAm-h20wnHb_sacHT-RZW9HBzAtHp7k1C8fQWFN4l7Z8F8NplSbb1NWMZLPy-k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-all duration-300 group-hover:from-black/80"></div>
+<span class="absolute top-8 left-8 bg-deep-navy text-white px-5 py-1.5 rounded-full text-[12px] font-bold tracking-widest transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(255,255,255,0.4)]">Swan Spirit</span>
+<div class="absolute bottom-8 left-8 right-8 transition-transform duration-300 group-hover:-translate-y-2">
+<h3 class="font-montserrat text-[28px] font-bold text-white mb-2">Văn hóa Thiên Nga</h3>
+<p class="text-white/90 text-[15px] leading-relaxed editorial-text">Xây dựng văn hóa doanh nghiệp dựa trên tinh thần đoàn kết, đổi mới, đồng hành và không ngừng phát triển.</p>
+</div>
+</div>
+</div>
+<div class="mt-20 flex justify-center">
+<button class="bg-deep-navy text-white px-10 py-4 rounded-xl font-bold hover:bg-dynamic-pink hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 text-lg">
+<span class="">Khám Phá Văn Hóa Couple Group</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- END: Foundation -->
+<!-- BEGIN: Team Photo -->
+<!-- END: Team Photo -->
+
+<!-- BEGIN: CTA Section -->
+<section class="py-40 relative overflow-hidden bg-primary px-margin-desktop reveal active">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-br from-deep-navy via-deep-navy to-secondary-container/20"></div>
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-dynamic-pink/10 rounded-full blur-[120px] -mr-64 -mt-64"></div>
+</div>
+<div class="container mx-auto relative z-10 text-center text-white space-y-12">
+<h2 class="font-montserrat text-[48px] font-extrabold tracking-tight editorial-text leading-tight max-w-4xl mx-auto">Đồng hành cùng hành trình Couple Group</h2>
+<p class="text-[20px] max-w-2xl mx-auto text-soft-white/80 editorial-text leading-loose">
+          Chúng tôi luôn tìm kiếm những cá nhân đam mê để cùng kiến tạo tương lai. Cùng nhau, chúng ta xây dựng một tương lai tốt đẹp hơn.
+        </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-8">
+<a class="bg-dynamic-pink text-white px-12 py-6 rounded-xl font-bold hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 w-full sm:w-auto" href="#">
+            Gia nhập đội ngũ
+          </a>
+<a class="bg-white/5 backdrop-blur-xl border border-white/20 text-white px-12 py-6 rounded-xl font-bold hover:bg-white hover:text-deep-navy hover:-translate-y-2 transition-all duration-500 w-full sm:w-auto" href="mailto:contact@couplegroup.com">
+            Liên hệ ngay
+          </a>
+</div>
+</div>
+</section>
+<!-- END: CTA Section -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="w-full bg-primary text-soft-white pt-32 pb-0 border-t border-white/5 relative overflow-hidden">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-20 relative z-10 pb-20 px-margin-desktop">
+<div class="max-w-sm space-y-8">
+<span class="font-montserrat text-[24px] font-extrabold block tracking-tight">Couple Group</span>
+<p class="text-soft-white/60 editorial-text leading-relaxed">
+          Dẫn đầu trong lĩnh vực thời trang và phong cách sống từ năm 2010. Di sản Việt Nam, tầm nhìn toàn cầu.
+        </p>
+<div class="flex gap-5">
+    <a class="w-12 h-12 rounded-xl border border-soft-white/10 flex items-center justify-center hover:bg-dynamic-pink transition-all"
+       href="https://www.facebook.com/couplegroup.2020"
+       target="_blank">
+
+        <i class="fa-brands fa-facebook-f text-xl"></i>
+
+    </a>
+
+    <a class="w-12 h-12 rounded-xl border border-soft-white/10 flex items-center justify-center hover:bg-dynamic-pink transition-all"
+       href="https://www.youtube.com/@COUPLETX09"
+       target="_blank">
+
+        <i class="fa-brands fa-youtube text-xl"></i>
+
+    </a>
+</div>
+</div>
+
+<div class="max-w-sm space-y-10">
+<h4 class="text-[12px] font-bold uppercase tracking-[0.3em] opacity-50">Thông tin Liên hệ</h4>
+<div class="space-y-6 text-soft-white/60 text-[15px]">
+<p class="flex items-start gap-4">
+<span class="material-symbols-outlined text-dynamic-pink mt-1">location_on</span>
+            Văn phòng điều hành COUPLE GROUP<br/>194 DE Pasteur, Phường Xuân Hòa, TP. Hồ Chí Minh
+          </p>
+<p class="flex items-center gap-4">
+<span class="material-symbols-outlined text-dynamic-pink">mail</span>
+            contact@couplegroup.com
+          </p>
+<p class="flex items-center gap-4">
+<span class="material-symbols-outlined text-dynamic-pink">call</span>
+            028 7306 6562
+          </p>
+</div>
+</div>
+</div>
+<div class="w-full py-6 px-margin-desktop bg-ink-black text-soft-white/50 text-[12px] flex flex-col md:flex-row justify-between items-center border-t border-white/5">
+<p class="">© 2024 Couple Group. Tất cả các quyền được bảo lưu.</p>
+<p class="">Được xây dựng cho tương lai của phong cách sống.</p>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: Interactive Scripts -->
+<script data-purpose="scroll-animations">
+    // Intersection Observer for scroll reveal animations
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Scroll interaction for navbar
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('main-header');
+      if (window.scrollY > 100) {
+        header.classList.add('py-2', 'shadow-2xl', 'bg-white/95');
+        header.classList.remove('py-4', 'bg-white/80');
+      } else {
+        header.classList.add('py-4', 'bg-white/80');
+        header.classList.remove('py-2', 'shadow-2xl', 'bg-white/95');
+      }
+    });
+  </script>
+<!-- END: Interactive Scripts -->
+</body></html>

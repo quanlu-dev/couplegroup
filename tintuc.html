@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tin tức | Couple Group - Heritage &amp; Pulse</title>
+<!-- Google Fonts: Montserrat (Headline) & Inter (Body) -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#a9c7ff",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-container": "#f59561",
+                        "on-primary-fixed": "#001b3d",
+                        "secondary-fixed": "#ffd9e2",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary": "#002a58",
+                        "outline-variant": "#c3c6d2",
+                        "tertiary": "#4c1d00",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "slate-gray": "#4A5568",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e1e3e4",
+                        "surface-tint": "#305ea0",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#6f2d00",
+                        "on-primary-container": "#83aef5",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#004080",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed-variant": "#773305",
+                        "inverse-on-surface": "#f0f1f2",
+                        "secondary-fixed-dim": "#ffb0c9",
+                        "surface-dim": "#d9dadb",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#b50062",
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1d",
+                        "deep-navy": "#004080",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f8f9fa",
+                        "on-surface-variant": "#424750",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary-fixed-variant": "#0e4686",
+                        "inverse-surface": "#2e3132",
+                        "on-secondary-fixed-variant": "#8e004b",
+                        "on-tertiary-fixed": "#341100",
+                        "error-container": "#ffdad6",
+                        "outline": "#737781",
+                        "secondary-container": "#e2007c",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-fixed": "#3e001e",
+                        "soft-white": "#FFFFFF",
+                        "surface": "#f8f9fa",
+                        "on-surface": "#191c1d",
+                        "on-error-container": "#93000a",
+                        "dynamic-pink": "#E6007E",
+                        "ink-black": "#1A202C"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #002a58 0%, #004080 100%);
+        }
+        .article-card:hover .article-image {
+            transform: scale(1.05);
+        }
+        .transition-standard {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md dark:bg-primary/90 shadow-sm transition-all duration-300"><div class="max-w-container-max mx-auto w-full flex justify-between items-center px-margin-desktop py-4">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold text-deep-navy dark:text-soft-white">Couple Group</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-deep-navy transition-colors font-body-md text-body-md" href="gioithieu.html">Trang chủ</a>
+<a class="text-on-surface-variant hover:text-deep-navy transition-colors font-body-md text-body-md" href="gioithieu.html">Giới thiệu</a>
+<a class="text-on-surface-variant hover:text-deep-navy transition-colors font-body-md text-body-md" href="thanhvien.html">Thành viên</a>
+<a class="text-on-surface-variant hover:text-deep-navy transition-colors font-body-md text-body-md" href="vanhoa.html">Văn hóa</a>
+<a class="text-on-surface-variant hover:text-deep-navy transition-colors font-body-md text-body-md" href="foundation.html">Quỹ cộng đồng</a>
+<a class="text-deep-navy font-bold border-b-2 border-dynamic-pink pb-1 font-body-md text-body-md" href="tintuc.html">Tin tức</a>
+<a class="text-on-surface-variant hover:text-deep-navy transition-colors font-body-md text-body-md" href="tuyendung.html">Tuyển dụng</a>
+</nav>
+<button class="bg-deep-navy text-soft-white px-6 py-3 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all scale-95 active:opacity-80">
+            Liên hệ ngay
+        </button>
+</div></header>
+<!-- Hero Section -->
+<header class="pt-20">
+<div class="hero-gradient h-48 md:h-64 w-full flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+</div>
+<div class="relative z-10 text-center">
+<h1 class="font-display-lg text-display-lg text-soft-white uppercase tracking-wider">Tin tức</h1>
+<div class="mt-4 flex items-center justify-center gap-2">
+<span class="h-[1px] w-8 bg-dynamic-pink"></span>
+<p class="font-label-sm text-label-sm text-surface-container-highest tracking-widest uppercase">Cập nhật mới nhất</p>
+<span class="h-[1px] w-8 bg-dynamic-pink"></span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content: News Feed -->
+<main class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop py-20 bg-soft-white">
+<!-- Bento-ish Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Article 1: Featured (Large) -->
+<article class="md:col-span-8 group article-card cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-[16/9] mb-6">
+<img class="w-full h-full object-cover transition-standard article-image" data-alt="A modern, high-end office interior for Couple Group featuring sleek architectural lines, minimalist furniture, and warm lighting. The space feels premium and professional, with polished floors and corporate branding integrated into the walls. High-resolution corporate photography style with balanced navy and white tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUcL1-zhCjXwpwWYsmSTOuzrkZjv7c2JjKjxFPiFberkPPdQXr2Ze0WqCc3Gqh3Kkl6ZAl7JZUGl1WSolOkuxOvVDl5ecWKYCjVUcBXUC6r0P-mnzVZ9MxdLLBuLGzRxtD47cM82BdgsC0aJ80BG4MTkjDxWPQGbUyQWi2b0WLvQST1V8_0yBzNBP8r2cTxhx15tjZdDM-tGAoCrZcEOUSXu8IBfq7G-L5AYjzbvybiIPKu0jJ7OzBasAmoF-NECPUVwF2zwBzKEwNpw"/>
+<div class="absolute top-4 left-4">
+<span class="bg-deep-navy text-soft-white px-4 py-1 font-label-sm text-label-sm rounded-full">Sự kiện</span>
+</div>
+</div>
+<div class="space-y-3">
+<h2 class="font-headline-lg text-headline-lg text-primary group-hover:text-secondary transition-colors uppercase leading-tight">COUPLE GROUP CHÍNH THỨC KHAI TRƯƠNG VĂN PHÒNG MỚI</h2>
+<p class="text-on-surface-variant font-body-md line-clamp-3">Bước ngoặt quan trọng đánh dấu sự phát triển bền vững và tầm nhìn vươn tầm quốc tế của Couple Group trong không gian làm việc sáng tạo, hiện đại bậc nhất.</p>
+<a class="inline-flex items-center gap-2 text-dynamic-pink font-label-md font-bold group/link" href="#">
+                        XEM THÊM 
+                        <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article 2: Side Column -->
+<article class="md:col-span-4 group article-card cursor-pointer">
+<div class="relative overflow-hidden rounded-lg aspect-[4/5] mb-6">
+<img class="w-full h-full object-cover transition-standard article-image" data-alt="A vibrant retail store front of Couple TX during a grand opening event. The scene is filled with energy, featuring modern lighting, stylish clothing displays, and a crowd of enthusiastic customers. The color palette emphasizes deep navy and bright highlights, capturing a successful business milestone in a urban setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjF5A56FO_sVqov89hSIu-yj4rfV0jzPNDwAHW0lJRPXHiGTJMTCde-49ebi8rsS4VkZ2Y944cVGR2SlTc4sPWBUAhK93RNAehFN-qKvjcylyplyAIusTjURhOeI5jl5Z3zRclPp3DwQl_o2NQoSdOZiX8WbDFOKaerwkVYygUJMb6afAusPxe5_2hJaE69ev5Nxy6hfOlTeBukt1Af_IrKbkD7QxsYPZj3jqtHrD85-ARLhL2hT_K2eeMJYqa4qY6UhpeumgxzQkJ8Q"/>
+<div class="absolute top-4 left-4">
+<span class="bg-deep-navy text-soft-white px-4 py-1 font-label-sm text-label-sm rounded-full">Kinh doanh</span>
+</div>
+</div>
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors uppercase">Điều gì giúp Couple TX mở cùng lúc 8 cửa hàng dù thị trường khó khăn?</h3>
+<a class="inline-flex items-center gap-2 text-dynamic-pink font-label-md font-bold group/link" href="#">
+                        XEM THÊM 
+                        <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Divider Line -->
+<div class="md:col-span-12 h-px bg-outline-variant my-8"></div>
+<!-- Row 2 -->
+<!-- Article 3 -->
+<article class="md:col-span-6 group article-card cursor-pointer flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2 overflow-hidden rounded-lg aspect-[4/3]">
+<img class="w-full h-full object-cover transition-standard article-image" data-alt="A dynamic corporate kick-off event titled Going Green 2023. The atmosphere is energetic and inspiring, with green and white decorations, professional stage lighting, and a team of motivated employees. The image captures the spirit of innovation and environmental responsibility in a modern corporate culture setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUyPMkf2E5b5w7vz55WjkOsBC_MKQgHM074_eM8VYS3Wge5qBHr305QetfCu1DTLkISkjtlPwd-hebf1p4HfhnVoEFSKCyFhPURXmkxpuAAPXWlLfYGtm-AuRcWgyAKKiOpUGiUl8KquYPpra_iOs-Zw-gZZCzn8LpcQTTxCNWoAQrIX3UUX15vOcDpNk2SxD6YknCwBayTrvGfVf0sp8hRWeTkzaTku3mq4SvBYR9uzIrxU6QjyLbL-eO_IGJlzfOrXaMHWMVGnknPA"/>
+</div>
+<div class="md:w-1/2 flex flex-col justify-center space-y-3">
+<div class="font-label-sm text-label-sm text-on-surface-variant">25 THÁNG 10, 2023</div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors uppercase">Kick off GOING GREEN – TIẾP LỬA SÁNG TẠO 2023</h3>
+<a class="inline-flex items-center gap-2 text-dynamic-pink font-label-md font-bold group/link" href="#">
+                        XEM THÊM 
+                        <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Article 4 -->
+<article class="md:col-span-6 group article-card cursor-pointer flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2 overflow-hidden rounded-lg aspect-[4/3]">
+<img class="w-full h-full object-cover transition-standard article-image" data-alt="Fashion lifestyle photography featuring artist Trong Hieu and Couple TX promoting eco-friendly fashion. The setting is natural and bright, with soft sunlight filtering through leaves. The style is clean, modern, and high-fashion, emphasizing sustainable materials and a fresh, youthful energy consistent with the brand's Pulse identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOm3tXYjBqcFDtk20iou0Y_a9WmdSIDALOFjKqpWmacJftVIvIHhceKPifqebKhJ63nT52yRuMXwzHDqYU1Yj_RpiX946UycztdNBkn4JIO3shiAjcFcp1Qn7WWqU81K5v4_RKk3znKuxlLPwsZxVUaenz5MO5-uIUd-WznAbL0DK3EoSE0yUAGnjXfcdeEAcGTd96QvKBP381_teyuNsHEiy_tmiVUhhGMcskt6-ul7AzLzzjt6Iv-bl00PsZYmXUdKJIfTa9KzCt7Q"/>
+</div>
+<div class="md:w-1/2 flex flex-col justify-center space-y-3">
+<div class="font-label-sm text-label-sm text-on-surface-variant">12 THÁNG 09, 2023</div>
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors uppercase">COUPLE TX KẾT HỢP CÙNG TRỌNG HIẾU LAN TỎA THÔNG ĐIỆP SỐNG XANH</h3>
+<a class="inline-flex items-center gap-2 text-dynamic-pink font-label-md font-bold group/link" href="#">
+                        XEM THÊM 
+                        <span class="material-symbols-outlined text-[18px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Pagination (Minimalist) -->
+<div class="mt-20 flex justify-center items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline hover:bg-surface-container transition-colors disabled:opacity-30" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-deep-navy text-soft-white font-label-md">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container font-label-md transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container font-label-md transition-colors">3</button>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+<!-- Newsletter Simple CTA -->
+<section class="bg-surface-container-low py-16">
+<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4 uppercase">Nhận tin tức mới nhất</h2>
+<p class="text-on-surface-variant mb-8 max-w-xl mx-auto">Đăng ký nhận bản tin để không bỏ lỡ các thông tin quan trọng về dự án và sự kiện của Couple Group.</p>
+<form class="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
+<input class="flex-grow bg-soft-white border-outline-variant focus:border-deep-navy rounded-lg px-4 h-12 outline-none transition-standard" placeholder="Email của bạn" type="email"/>
+<button class="bg-deep-navy hover:bg-primary text-soft-white px-8 h-12 rounded-lg font-label-md font-bold uppercase transition-standard whitespace-nowrap" type="submit">ĐĂNG KÝ NGAY</button>
+</form>
+</div>
+</section>
+<!-- Footer (Identical to SCREEN_3) -->
+<footer class="w-full px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary dark:bg-ink-black text-soft-white pt-20 pb-0">
+<div class="max-w-sm">
+<span class="font-headline-md text-headline-md text-soft-white font-bold block mb-6">Couple Group</span>
+<p class="font-body-md text-body-md text-soft-white/70 mb-8">
+                Dẫn đầu trong lĩnh vực thời trang và phong cách sống từ năm 2010. Di sản Việt Nam, tầm nhìn toàn cầu.
+            </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full border border-soft-white/20 flex items-center justify-center hover:bg-dynamic-pink hover:border-dynamic-pink transition-all" href="https://www.facebook.com/couplegroup.2020">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-soft-white/20 flex items-center justify-center hover:bg-dynamic-pink hover:border-dynamic-pink transition-all" href="https://www.youtube.com/@COUPLETX09">
+<span class="material-symbols-outlined">play_circle</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div>
+<h4 class="font-label-md text-label-md text-soft-white uppercase mb-6 tracking-widest">Công ty</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Trang chủ</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Giới thiệu</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Thành viên</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Tuyển dụng</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-soft-white uppercase mb-6 tracking-widest">Hỗ trợ</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Chính sách bảo mật</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Điều khoản dịch vụ</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Chính sách Cookie</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Liên hệ</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-sm">
+<h4 class="font-label-md text-label-md text-soft-white uppercase mb-6 tracking-widest">Thông tin Liên hệ</h4>
+<div class="space-y-4 font-body-md text-body-md text-soft-white/70">
+<p class="flex items-start gap-3">
+<span class="material-symbols-outlined text-dynamic-pink">location_on</span>
+                    Văn phòng điều hành COUPLE GROUP<br/>194 DE Pasteur, Phường Võ Thị Sáu, Quận 3, TP. Hồ Chí Minh
+                </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-dynamic-pink">mail</span>
+                    contact@couplegroup.com
+                </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-dynamic-pink">call</span>
+                    028 7306 6562
+                </p>
+</div>
+</div>
+</footer>
+<div class="w-full py-6 px-margin-desktop bg-ink-black text-soft-white/50 text-[12px] flex flex-col md:flex-row justify-between items-center border-t border-white/5">
+<p class="">© 2024 Couple Group. Tất cả các quyền được bảo lưu.</p>
+<p class="">Được xây dựng cho tương lai của phong cách sống.</p>
+</div>
+<script>
+        // Simple header effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('header');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-2', 'shadow-md');
+                nav.classList.remove('py-4', 'shadow-sm');
+            } else {
+                nav.classList.add('py-4', 'shadow-sm');
+                nav.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html><html class="light" lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Công ty Thành viên | Couple Group</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f8f9fa",
+                        "secondary-fixed-dim": "#ffb0c9",
+                        "on-primary-container": "#83aef5",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed": "#3e001e",
+                        "surface-container": "#edeeef",
+                        "primary-container": "#004080",
+                        "ink-black": "#1A202C",
+                        "outline-variant": "#c3c6d2",
+                        "secondary-fixed": "#ffd9e2",
+                        "primary-fixed": "#d6e3ff",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "primary": "#002a58",
+                        "on-background": "#191c1d",
+                        "surface-variant": "#e1e3e4",
+                        "secondary-container": "#e2007c",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "on-surface": "#191c1d",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "on-primary-fixed": "#001b3d",
+                        "surface-dim": "#d9dadb",
+                        "slate-gray": "#4A5568",
+                        "error-container": "#ffdad6",
+                        "dynamic-pink": "#E6007E",
+                        "on-tertiary-fixed": "#341100",
+                        "background": "#f8f9fa",
+                        "tertiary": "#4c1d00",
+                        "secondary": "#b50062",
+                        "deep-navy": "#004080",
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#773305",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary-container": "#6f2d00",
+                        "on-secondary-fixed-variant": "#8e004b",
+                        "outline": "#737781",
+                        "on-tertiary-container": "#f59561",
+                        "on-primary-fixed-variant": "#0e4686",
+                        "soft-white": "#FFFFFF",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-fixed": "#ffdbcb",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#424750",
+                        "surface-tint": "#305ea0",
+                        "inverse-primary": "#a9c7ff",
+                        "surface-container-low": "#f3f4f5",
+                        "primary-fixed-dim": "#a9c7ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bento-card {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-soft-white dark:bg-ink-black shadow-sm transition-all duration-200 ease-in-out bg-soft-white/90 backdrop-blur-md z-[100]"><div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto"><div class="text-headline-md font-headline-md font-bold text-deep-navy dark:text-soft-white flex items-center"><img alt="Couple Group Logo" class="w-auto object-contain h-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQosYC9y3uO8xzw_DJCgu63vNdu_ykS4yCT4TIuVuj45YJUpQqSo_61tHV8EODtszT_wNxpcK-74M7ZbIKwp9MDdSz4DQSMPmkCnqx9l2xV5RAkpmv5-C2XD7PjiW1rvsc9F9LhWJj6JgbdL_PgrKyrQYhQ6r5EkadkXxajL1dZ1LEerrWRnRuUrtR87xyp_FS6juc5D1zlK0J1IaE1F34QCiJ3dMqfFkF_tasv1SwQHiYdF9cHiXcFkHfTO1z0mfRAGGLJbPMzQQ"><span class="ml-3 font-headline-md font-bold text-ink-black dark:text-soft-white">Couple Group</span></div><nav class="hidden md:flex space-x-8"><a class="dark:text-primary-fixed border-b-2 border-dynamic-pink font-bold pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md text-ink-black" href="#">Trang chủ</a><a class="dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md text-ink-black" href="#">Thành viên</a><a class="dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md text-ink-black" href="#">Văn hóa</a><a class="dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md text-ink-black" href="#">Quỹ cộng đồng</a><a class="dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md text-ink-black" href="#">Tin tức</a><a class="dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md text-ink-black" href="#">Tuyển dụng</a></nav><button class="bg-deep-navy text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all">Liên hệ ngay</button></div></header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[614px] md:h-[716px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A wide cinematic landscape of a modern corporate group featuring a diverse team of smiling professionals standing together in front of a sustainable wind turbine field. The lighting is warm and bright, conveying a sense of unity and visionary leadership. The aesthetic is premium and professional, with clear skies and a high-fashion digital feel consistent with the Couple Group brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDh9b9pCuuAGEH00ofHbRJd6z5pF-o-QwSEwV7bwz0xOo_8NhbeUE03TNPtjQzRf_kfX3iPUH_fwHhOFejlGF6Vd7cA1IcjtXcf50WtljFoS2qFc1Ad7ObqeWn96p39ItiNbUkq5hJj6cjJZ1-NCqwC5qGnKLgagek9TX968YK86ODy0i-qQ-bVA7JW9zVxr6Dg04gZY6QHa56dtdqKUEBEExJcXXgu_0QQUfUFksmtD1EbjZDqCRSwoOJOWIPalrAib6rms_JZuBk">
+<div class="absolute inset-0 bg-gradient-to-r from-deep-navy/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="max-w-2xl">
+<h1 class="text-soft-white font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Hệ sinh thái Couple Group</h1>
+<p class="text-soft-white/90 font-body-lg text-body-lg mb-8">Kiến tạo những giá trị bền vững và phong cách sống hiện đại thông qua mạng lưới các đơn vị thành viên hàng đầu trong lĩnh vực thời trang, sản xuất và dịch vụ.</p>
+<div class="flex gap-4">
+<a class="bg-dynamic-pink text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:scale-105 transition-transform inline-block" href="#member-sections">Khám phá ngay</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Member Companies Bento Grid -->
+<section class="py-24 max-w-container-max mx-auto px-margin-desktop" id="member-sections">
+<div class="text-center mb-16">
+<span class="text-dynamic-pink font-label-md text-label-md tracking-widest uppercase">HỆ SINH THÁI</span>
+<h2 class="text-deep-navy font-headline-lg text-headline-lg mt-2">Các Đơn Vị Thành Viên</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8"><!-- Couple TX Card -->
+<div class="group bento-card overflow-hidden rounded-xl bg-soft-white shadow-sm flex flex-col transition-all duration-500">
+<div class="h-64 overflow-hidden relative">
+<img alt="Couple TX Fashion" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvBr8FX2mPIAjXE-GtA7DXeE3B225xaSK8qNB8yNRHXI_caxJngZhl39dQEdK02TVUK8oWJ-9NlN627T3pYpWG_xlExQUP3ar3Vq0FwCOuHXqEZ7QOPggQcbRXzQ4paRXOThhMkJ4DVfEiJtR3NKnpszxoJzKs5S7yvVYf0HZSDJTIs1bmApEhPgjzLKdMLKHxB9yIXLfqET9qscHXis9oQtEglxzbCIRPrbWJwwl6YdG-9cZzSZlDWimfaqsMgDQAliJci1VOnQo">
+<div class="absolute top-4 left-4 glass-effect px-4 py-2 rounded-full">
+<span class="text-deep-navy font-label-sm text-label-sm">FASHION LIFESTYLE</span>
+</div>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-3">Couple TX</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6 italic border-l-4 border-dynamic-pink pl-4">"Biến thời trang thành phong cách sống."</p>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8 flex-1">Tiên phong xây dựng hệ sinh thái thời trang toàn diện, gắn liền với trải nghiệm sống hiện đại.</p>
+<a class="flex items-center text-dynamic-pink font-label-md text-label-md group/link w-fit" href="#">
+            Tìm hiểu thêm
+            <span class="material-symbols-outlined ml-2 group-hover/link:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Trường Thắng Corp Card -->
+<div class="group bento-card overflow-hidden rounded-xl bg-soft-white shadow-sm flex flex-col transition-all duration-500">
+<div class="h-64 overflow-hidden relative">
+<img alt="Manufacturing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZSeVWZFpTh61WMRA9TdxV0QIlEAY_nbx3hYpwrjKF8oRXe9NMBXblgSrJCESsOPfuu5wQuL7-Z4IsZRBi-pyAB5BALiRFklCKeasNuTHpC4dLjQS_1IA3dPwQvorJVF-CF7Mt8hQ6vyWUCU_wmBxYUOaO3uKV2ioHm7JeZLL-iPdcJROEYEovkCONK5OD-4RiMzpeDWqhh7WlUq92ogf4eQ_MZazS2WbCcdwH4Y1nd7cDwh_K-oHZNcppHEdBNbOvjdIte88Aoqo">
+<div class="absolute top-4 left-4 glass-effect px-4 py-2 rounded-full">
+<span class="text-deep-navy font-label-sm text-label-sm">MANUFACTURING</span>
+</div>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-3">Trường Thắng Corp</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6 italic border-l-4 border-dynamic-pink pl-4">"Chất lượng quốc tế, bền vững."</p>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8 flex-1">Nhà sản xuất hàng may mặc hàng đầu, thực hiện các đơn hàng FOB xuất khẩu sang Mỹ và Châu Âu.</p>
+<a class="flex items-center text-dynamic-pink font-label-md text-label-md group/link w-fit" href="#">
+            Tìm hiểu thêm
+            <span class="material-symbols-outlined ml-2 group-hover/link:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Epicsport Card -->
+<div class="group bento-card overflow-hidden rounded-xl bg-soft-white shadow-sm flex flex-col transition-all duration-500">
+<div class="h-64 overflow-hidden relative">
+<img alt="Epicsport" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwXV0aTACO-LiUdAjv3SQwe8SVYDYilMZK1mcHFMfoz70r6TgzHZOi1fLF98qfbISIJztk_LpXsU3FiuxQk81whPVTswhyD_eDTt4Luv44tsF8zswGahHl4Z2y7gOk28z9AnHenMWbbFRg6ssPvbsqa9L64q7_yZasLZagBuPN89B9OyoZ_7pHoBBISig_-a_CGl8ATrwiNLeAUQfMueKYBy00Cut9EO-MiKGWwqoEF_gXo9dSy8ZBwLCHGo4gxyRASyK7dKoI8YU">
+<div class="absolute top-4 left-4 glass-effect px-4 py-2 rounded-full">
+<span class="text-deep-navy font-label-sm text-label-sm">SPORT FASHION</span>
+</div>
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-3">Epicsport</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6 italic border-l-4 border-dynamic-pink pl-4">"Hiệu suất và phong cách năng động."</p>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8 flex-1">Giải pháp thời trang thể thao chuyên nghiệp, hỗ trợ tối đa hiệu suất vận động cá nhân.</p>
+<a class="flex items-center text-dynamic-pink font-label-md text-label-md group/link w-fit" href="#">
+            Tìm hiểu thêm
+            <span class="material-symbols-outlined ml-2 group-hover/link:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div></div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary-container py-24">
+<div class="max-w-4xl mx-auto px-margin-desktop text-center">
+<h2 class="text-soft-white font-headline-lg text-headline-lg mb-6">Sẵn sàng đồng hành cùng chúng tôi?</h2>
+<p class="text-on-primary-container font-body-lg text-body-lg mb-10">Couple Group luôn chào đón những cơ hội hợp tác chiến lược để cùng nhau kiến tạo những giá trị mới cho thị trường và cộng đồng.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<a class="bg-dynamic-pink text-on-primary px-10 py-5 rounded-lg font-label-md text-label-md hover:shadow-lg hover:shadow-dynamic-pink/30 transition-all w-full md:w-auto text-center" href="mailto:contact@couplegroup.com">
+                        Liên hệ Hợp tác
+                    </a>
+<a class="border-2 border-soft-white text-soft-white px-10 py-5 rounded-lg font-label-md text-label-md hover:bg-soft-white hover:text-deep-navy transition-all w-full md:w-auto text-center" href="#">
+                        Hồ sơ năng lực
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-ink-black text-soft-white w-full transition-all duration-200">
+<div class="w-full px-margin-desktop py-16 flex flex-col md:flex-row justify-between items-start max-w-container-max mx-auto gap-12">
+<div class="md:max-w-md">
+<div class="text-headline-md font-headline-md font-bold text-soft-white mb-6">Couple Group</div>
+<p class="font-body-md text-body-md opacity-90 mb-8 leading-relaxed">
+                Dẫn đầu trong lĩnh vực thời trang và phong cách sống từ năm 2010. Di sản Việt Nam, tầm nhìn toàn cầu.
+            </p>
+<div class="flex space-x-5">
+<a class="w-10 h-10 rounded-full border border-soft-white/20 flex items-center justify-center hover:bg-dynamic-pink hover:border-dynamic-pink transition-all duration-300" href="#"><span class="material-symbols-outlined text-[20px]">facebook</span></a>
+<a class="w-10 h-10 rounded-full border border-soft-white/20 flex items-center justify-center hover:bg-dynamic-pink hover:border-dynamic-pink transition-all duration-300" href="#"><span class="material-symbols-outlined text-[20px]">play_circle</span></a>
+<a class="w-10 h-10 rounded-full border border-soft-white/20 flex items-center justify-center hover:bg-dynamic-pink hover:border-dynamic-pink transition-all duration-300" href="#"><span class="material-symbols-outlined text-[20px]">mail</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12 w-full md:flex-1">
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-md text-label-md text-soft-white uppercase tracking-[0.15em] mb-4">Công ty</h4>
+<a class="font-body-md text-body-md text-soft-white/70 hover:text-dynamic-pink transition-colors" href="#">Trang chủ</a>
+<a class="font-body-md text-body-md text-soft-white/70 hover:text-dynamic-pink transition-colors" href="#">Thành viên</a>
+<a class="font-body-md text-body-md text-soft-white/70 hover:text-dynamic-pink transition-colors" href="#">Văn hóa</a>
+<a class="font-body-md text-body-md text-soft-white/70 hover:text-dynamic-pink transition-colors" href="#">Tuyển dụng</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-md text-label-md text-soft-white uppercase tracking-[0.15em] mb-4">Hỗ trợ</h4>
+<a class="font-body-md text-body-md text-soft-white/70 hover:text-dynamic-pink transition-colors" href="#">Chính sách bảo mật</a>
+<a class="font-body-md text-body-md text-soft-white/70 hover:text-dynamic-pink transition-colors" href="#">Điều khoản dịch vụ</a>
+<a class="font-body-md text-body-md text-soft-white/70 hover:text-dynamic-pink transition-colors" href="#">Chính sách Cookie</a>
+<a class="font-body-md text-body-md text-soft-white/70 hover:text-dynamic-pink transition-colors" href="#">Liên hệ</a>
+</div>
+<div class="flex flex-col space-y-4 col-span-2 md:col-span-1">
+<h4 class="font-label-md text-label-md text-soft-white uppercase tracking-[0.15em] mb-4">Thông tin Liên hệ</h4>
+<div class="flex items-start space-x-3 text-soft-white/70 group">
+<span class="material-symbols-outlined text-[20px] text-dynamic-pink">location_on</span>
+<p class="font-body-md text-body-md leading-relaxed">194 DE Pasteur, Phường Võ Thị Sáu, Quận 3, TP. Hồ Chí Minh</p>
+</div>
+<div class="flex items-center space-x-3 text-soft-white/70">
+<span class="material-symbols-outlined text-[20px] text-dynamic-pink">call</span>
+<p class="font-body-md text-body-md">Hotline: 028 7306 6562</p>
+</div>
+<div class="flex items-center space-x-3 text-soft-white/70">
+<span class="material-symbols-outlined text-[20px] text-dynamic-pink">mail</span>
+<p class="font-body-md text-body-md">Email: contact@couplegroup.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full py-6 px-margin-desktop bg-ink-black text-soft-white/50 text-[12px] flex flex-col md:flex-row justify-between items-center border-t border-white/5">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4 text-label-sm text-white/60">
+<p class="">© 2024 Couple Group. Tất cả các quyền được bảo lưu.</p>
+<div class="flex items-center gap-6">
+<p class="">Được xây dựng cho tương lai của phong cách sống.</p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

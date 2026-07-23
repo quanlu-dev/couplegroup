@@ -1,0 +1,423 @@
+<!DOCTYPE html><html class="light" lang="vi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tuyển dụng | Couple Group</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#001b3d",
+                        "surface-container-low": "#f3f4f5",
+                        "on-tertiary-container": "#f59561",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "inverse-primary": "#a9c7ff",
+                        "slate-gray": "#4A5568",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "tertiary": "#4c1d00",
+                        "outline-variant": "#c3c6d2",
+                        "primary": "#002a58",
+                        "surface-container-highest": "#e1e3e4",
+                        "secondary-fixed": "#ffd9e2",
+                        "on-primary-container": "#83aef5",
+                        "tertiary-container": "#6f2d00",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "surface-tint": "#305ea0",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#ffb0c9",
+                        "surface-dim": "#d9dadb",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed-variant": "#773305",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#004080",
+                        "on-surface-variant": "#424750",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f8f9fa",
+                        "on-error": "#ffffff",
+                        "on-background": "#191c1d",
+                        "deep-navy": "#004080",
+                        "secondary": "#b50062",
+                        "surface-bright": "#f8f9fa",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#341100",
+                        "on-secondary-fixed-variant": "#8e004b",
+                        "on-primary-fixed-variant": "#0e4686",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-high": "#e7e8e9",
+                        "soft-white": "#FFFFFF",
+                        "secondary-container": "#e2007c",
+                        "primary-fixed": "#d6e3ff",
+                        "on-secondary-fixed": "#3e001e",
+                        "outline": "#737781",
+                        "ink-black": "#1A202C",
+                        "dynamic-pink": "#E6007E",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#191c1d",
+                        "surface": "#f8f9fa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 300px);
+            gap: 16px;
+        }
+        .nav-link-active {
+            color: #002a58;
+            border-bottom: 2px solid #002a58;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-dynamic-pink selection:text-white">
+<!-- Header (TopNavBar) -->
+<header class="sticky top-0 w-full z-50 bg-soft-white dark:bg-ink-black shadow-sm transition-all duration-200 ease-in-out bg-soft-white/90 backdrop-blur-md z-[100]"><div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-deep-navy dark:text-soft-white">
+                Couple Group
+            </div>
+<nav class="hidden md:flex space-x-8">
+<a class="text-slate-gray dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md" href="gioithieu.html">Trang chủ</a>
+<a class="text-slate-gray dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md" href="gioithieu.html">Giới thiệu</a>
+<a class="text-slate-gray dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md" href="thanhvien.html">Thành viên</a>
+<a class="text-slate-gray dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md" href="vanhoa.html">Văn hóa</a>
+<a class="text-slate-gray dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md" href="foundation.html">Quỹ cộng đồng</a>
+<a class="text-slate-gray dark:text-outline-variant font-medium pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md" href="tintuc.html">Tin tức</a>
+<a class="text-deep-navy dark:text-primary-fixed border-b-2 border-dynamic-pink font-bold pb-1 hover:text-dynamic-pink transition-colors duration-300 font-label-md text-label-md" href="tuyendung.html">Tuyển dụng</a>
+</nav>
+<button class="bg-deep-navy text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all">
+                Liên hệ ngay
+            </button>
+</div></header>
+<main class="pt-0">
+<!-- Hero Section -->
+<section class="relative h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/40 z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic wide-angle shot of a diverse, professional group of young adults collaborating in a bright, modern corporate office. The scene is bathed in soft, high-key natural lighting, creating an atmosphere of inspiration and forward-thinking energy. The color palette reflects a sophisticated light mode UI, dominated by clean whites and deep navy accents with a touch of modern retail vibrancy. The mood is visionary and collective, perfectly aligned with the Couple Group heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa3zBonRiuJCYNH3zK6IfS0-4mdfCsCz2NaqMxp7xd8RLOkLM5FzDvfQHXlAAzM3FoM84DMqSaxUOt9mzO_4yVy8V8rffE2sQBu6LxDQFZ4mz8xiLlfjuEqoSqLavj2nafMGM8Fm_sf7pVGldJtsMeWv_N6LVoi5VUTjz4v7w4cx9P53djXV0Vq5AKZwKInLBt11C3Vh6OjLNQbfVONLpBiQHqjcoUqrLibXDEjKuT8zmPN7KqiEiVf6xCGc92Fk72ZkAlzKfE_AY">
+</div>
+<div class="relative z-20 px-margin-desktop max-w-container-max mx-auto w-full text-white">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg mb-4">GIA NHẬP ĐỘI NGŨ COUPLE GROUP</h1>
+<p class="font-headline-md text-headline-md mb-8 opacity-90">Cùng đồng hành kiến tạo tương lai</p>
+<a class="inline-block px-8 py-4 bg-dynamic-pink text-white font-label-md text-label-md rounded-lg shadow-lg hover:shadow-dynamic-pink/30 transition-all hover:-translate-y-1" href="#jobs">
+                        Xem cơ hội nghề nghiệp
+                    </a>
+</div>
+</div>
+</section>
+<!-- Core Values Section -->
+<section class="py-24 bg-soft-white">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Giá trị cốt lõi</h2>
+<div class="w-20 h-1 bg-dynamic-pink mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col items-center text-center group">
+<div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl text-dynamic-pink" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">TỬ TẾ</h3>
+<p class="text-on-surface-variant">Luôn đặt cái tâm vào mọi hoạt động, đối đãi chân thành với khách hàng, đối tác và đồng nghiệp.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl text-dynamic-pink" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">SÁNG TẠO</h3>
+<p class="text-on-surface-variant">Không ngừng đổi mới, tìm kiếm những giải pháp tối ưu để nâng tầm trải nghiệm thời trang và lối sống.</p>
+</div>
+<div class="flex flex-col items-center text-center group">
+<div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-4xl text-dynamic-pink" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">NHIỆT HUYẾT</h3>
+<p class="text-on-surface-variant">Sống và làm việc với đam mê cháy bỏng, sẵn sàng dấn thân và chinh phục những thách thức mới.</p>
+</div>
+</div>
+</section>
+<!-- Why Join Us Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-dynamic-pink/10 rounded-full z-0"></div>
+<img alt="Môi trường làm việc tại Couple Group" class="relative z-10 w-full h-[400px] object-cover rounded-xl shadow-xl" src="https://lh3.googleusercontent.com/aida/AP1WRLsTqGuh9tepRnNpQvQ0qmxP9PnXEwCNHfvoI0mBf1ZgV_8dO4S_bg8TDdcU2xDAVgWYrunctDcrOvnUn-BhG2m9lwl03SlkDSCwwQIuPHKaz_Ccw5ln5Wy_I3PQmuig9WO5MKDQWnbDRPHZwW48WSx5BYgU09RerNSAQyPHwXf7mXQW9r9qB8QR1lu2mXQIblDYonQhkzNTAnTRh3p6mA8ZnQiu78XFnYIJdRpJUQwesy102w0TeD5AQQ">
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Tại sao chọn chúng tôi?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Tại Couple Group, chúng tôi không chỉ xây dựng một doanh nghiệp thời trang, mà còn kiến tạo một cộng đồng nơi mỗi cá nhân đều có cơ hội tỏa sáng. Chúng tôi tự hào về môi trường làm việc cởi mở, chuyên nghiệp và đầy cảm hứng.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-dynamic-pink mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">Cơ hội thăng tiến và phát triển sự nghiệp rõ ràng.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-dynamic-pink mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">Chế độ phúc lợi cạnh tranh, chăm sóc toàn diện cho nhân viên.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-dynamic-pink mt-1" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">Môi trường trẻ trung, năng động và giàu văn hóa gắn kết.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Career Opportunities Section -->
+<!-- Culture Gallery Section -->
+<section class="py-24 bg-surface">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Văn hóa &amp; Hoạt động</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Những khoảnh khắc rạng rỡ và tràn đầy năng lượng của đại gia đình Couple Group trong các hoạt động kết nối.</p>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
+<div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-xl">
+<img alt="Hoạt động nhóm Couple Group" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtLXWaAKVcZ8lOr4POwM9lsOg2lWclHgMEqy9tm-HvrFcR94s1MznKsMsWUpGF__Iq7ZWJ0orDtTe4EoItE8akCsyGzC6aCtEkLz_I-o1qtRNCF6fzPLEPvO6k1lq1A9z9L6OY45cEhrdktRsMcr9fif_EFL5yACC5BW2T8VatLxd4F_nnUnD0nkWLGr-qmrvY30iJemijsRdriZmOl2x1b0nIFMiu98pOIpQ3WJ6aDkVgN_D7BhBeU7WY">
+</div>
+<div class="overflow-hidden rounded-xl">
+<img alt="Văn hóa làm việc" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLt-nQyY9Rqmz6RtG9QgruSDAVLs_lc4tX1Ndf720lSpckRfzwW0nZC4R2HXvaOD3UaMC2sWhC_yO98xMEF0nz58MlRObibnfBGUaVlZLbIJSDGsOqUIHtHvRiUxaTyI752ZAW7FrqMY3MHdfX6mmUmbgMEjm04b_yWv-QRqX0JYZIrylwQegCCqymsWoho2p5cLhIuzGqK6UOPvHSHnNqJEFLatcY46tiAQ-SpqgxHo0shRIwsBi8Vh8Q">
+</div>
+<div class="overflow-hidden rounded-xl">
+<img alt="Sự kiện nội bộ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLucvcocDGDFBBiwxWbAqRub5MXd2qWvfAnSkvpk_vvDje4PtcQwZWC7xVW88bTW5q7-YYCpND3-oLKwzqgNQu4xRYMSE4KSciPq4L70nfUQnV-8WD9lXqhoWAlUX-tv1LgxNTniBY0ZRQ2nZvZm0ROyzv2-09_804TJpIIq2-zpamVIoWWm4RmG6bSjFxJDNGAQCU4saR6eOXbQh2PTVtFrW8H5RHTn3XINl1IzpLfpG5D6lYi4crlgT4s">
+</div>
+<div class="md:col-span-2 overflow-hidden rounded-xl">
+<img alt="Đội ngũ năng động" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtLadriunSX7qSSGktWKu07a-HwHIXMvcVXs5zoJBPad5pia47b5LGmT1TXrfAf_ImpH3d4LekNPK90caa0LCR0ZqyLejtj3eWL5fqttVk3Y6Rbdsz_xvETMkocswbciKHBS-13Vdl6vBvizo8umbj3Yk6XRw_KXNSXmTOgwz2lMifKp-cZWAQ7LkkOsJPDXHwrqL74cE9bSvEadWwhBaYhufqi5sikmGRKoaQf51N7LsNC2YaC8mkNSg">
+</div>
+<div class="overflow-hidden rounded-xl">
+<img alt="Không gian sáng tạo" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtMfeN01GTXivzmXIzLdM6ITQw3mqjgbA1Xkvw9VyoNXISXCjHotr86sUEqiNlkVOJITa9AjrOpUa1fK7ojU9ElHFGVEg7q75HSF9qIwRe2AiSl4drLkSWJqfFPRrkhTZ3gzKxphl0ZhUrHCmw6Xmfe4Xyha7C5kf12r_Ng3PSP3qPPB1Ij0cLU5jT3NTZ2a0H44dCurvRukZJ-PShOa-j1VKTxtFFl49ezG4VV9CGgTi8l4n-1fJfDEzU">
+</div>
+<div class="overflow-hidden rounded-xl">
+<img alt="Kết nối đồng nghiệp" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvm6qzH5VzTwNVdAF3jb8SA87055PGrnaS6LWjjELJDKukiIU4yZRHqkg9fji3Ps3sNBpY2LrdCMnwgsQQQdAhPymc1UsTaScAFEikc67qANkqV9iHe5lE77ZOfiXpXjL65u-tmwqG12FbuvhVL_fra0TiBAFNy912xCjwENBkEYWs4wzxgwSpxSZWvu8tWIDsqS6mJ7IE21iBQLU8n2xV28dsZDpK5r84M1cfc9mM5Y6F_LUWP6NPdHA">
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / CTA -->
+<section class="py-24 bg-soft-white" id="jobs">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Cơ hội nghề nghiệp</h2>
+<p class="text-on-surface-variant">Khám phá các vị trí đang mở tuyển và tìm thấy hành trình của bạn.</p>
+</div>
+<div class="hidden md:flex gap-2">
+<div class="px-4 py-2 border border-outline-variant rounded-full text-label-md font-label-md cursor-pointer hover:bg-surface-container hover:text-primary transition-all">Tất cả</div>
+<div class="px-4 py-2 border border-outline-variant rounded-full text-label-md font-label-md cursor-pointer hover:bg-surface-container hover:text-primary transition-all">Văn phòng</div>
+<div class="px-4 py-2 border border-outline-variant rounded-full text-label-md font-label-md cursor-pointer hover:bg-surface-container hover:text-primary transition-all">Khối cửa hàng</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Job Card 1 -->
+<div class="p-8 bg-white border border-outline-variant rounded-xl hover:shadow-lg transition-all group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm text-primary">Toàn thời gian</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-dynamic-pink transition-colors" data-icon="bookmark">bookmark</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-dynamic-pink transition-colors">Quản Lý Đơn Hàng (Merchandiser)</h3>
+<div class="flex gap-4 text-on-surface-variant font-label-md text-label-md mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="payments">payments</span> 14 - 17 Triệu</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> Hồ Chí Minh</span>
+</div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md text-label-md rounded-lg group-hover:bg-primary group-hover:text-white transition-all">Ứng tuyển ngay</button>
+</div>
+<!-- Job Card 2 -->
+<div class="p-8 bg-white border border-outline-variant rounded-xl hover:shadow-lg transition-all group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm text-primary">Quản lý</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-dynamic-pink transition-colors" data-icon="bookmark">bookmark</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-dynamic-pink transition-colors">Trưởng Bộ Phận Bán Lẻ</h3>
+<div class="flex gap-4 text-on-surface-variant font-label-md text-label-md mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="payments">payments</span> Thỏa thuận</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> Hồ Chí Minh</span>
+</div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md text-label-md rounded-lg group-hover:bg-primary group-hover:text-white transition-all">Ứng tuyển ngay</button>
+</div>
+<!-- Job Card 3 -->
+<div class="p-8 bg-white border border-outline-variant rounded-xl hover:shadow-lg transition-all group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm text-primary">Marketing</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-dynamic-pink transition-colors" data-icon="bookmark">bookmark</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-dynamic-pink transition-colors">Chuyên Viên Digital</h3>
+<div class="flex gap-4 text-on-surface-variant font-label-md text-label-md mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="payments">payments</span> Thỏa thuận</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> Hồ Chí Minh</span>
+</div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md text-label-md rounded-lg group-hover:bg-primary group-hover:text-white transition-all">Ứng tuyển ngay</button>
+</div>
+<!-- Job Card 4 -->
+<div class="p-8 bg-white border border-outline-variant rounded-xl hover:shadow-lg transition-all group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-6">
+<span class="px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm text-primary">Media</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-dynamic-pink transition-colors" data-icon="bookmark">bookmark</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-dynamic-pink transition-colors">Video Editor</h3>
+<div class="flex gap-4 text-on-surface-variant font-label-md text-label-md mb-6">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="payments">payments</span> Thỏa thuận</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> Hồ Chí Minh</span>
+</div>
+</div>
+<button class="w-full py-3 border border-primary text-primary font-label-md text-label-md rounded-lg group-hover:bg-primary group-hover:text-white transition-all">Ứng tuyển ngay</button>
+</div>
+</div>
+</div>
+</section><section class="py-16 bg-deep-navy text-white text-center">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg mb-4">Đừng bỏ lỡ cơ hội gia nhập cùng chúng tôi</h2>
+<p class="mb-8 opacity-80 max-w-xl mx-auto">Đăng ký nhận tin tuyển dụng mới nhất từ Couple Group để không bỏ lỡ vị trí phù hợp với bạn.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 max-w-lg mx-auto">
+<input class="flex-1 px-6 py-3 rounded-lg text-on-surface focus:ring-2 focus:ring-dynamic-pink outline-none" placeholder="Nhập email của bạn" type="email">
+<button class="px-8 py-3 bg-dynamic-pink text-white font-label-md text-label-md rounded-lg hover:bg-dynamic-pink/90 transition-all">Đăng ký ngay</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary dark:bg-ink-black text-soft-white pt-20 pb-0">
+<div class="max-w-sm">
+<span class="font-headline-md text-headline-md text-soft-white font-bold block mb-6">Couple Group</span>
+<p class="font-body-md text-body-md text-soft-white/70 mb-8">
+                Dẫn đầu trong lĩnh vực thời trang và phong cách sống từ năm 2010. Di sản Việt Nam, tầm nhìn toàn cầu.
+            </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full border border-soft-white/20 flex items-center justify-center hover:bg-dynamic-pink hover:border-dynamic-pink transition-all" href="https://www.facebook.com/couplegroup.2020">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-soft-white/20 flex items-center justify-center hover:bg-dynamic-pink hover:border-dynamic-pink transition-all" href="https://www.youtube.com/@COUPLETX09">
+<span class="material-symbols-outlined">play_circle</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div>
+<h4 class="font-label-md text-label-md text-soft-white uppercase mb-6 tracking-widest">Công ty</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Trang chủ</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Giới thiệu</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Thành viên</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Tuyển dụng</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-soft-white uppercase mb-6 tracking-widest">Hỗ trợ</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Chính sách bảo mật</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Điều khoản dịch vụ</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Chính sách Cookie</a></li>
+<li class=""><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Liên hệ</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-sm">
+<h4 class="font-label-md text-label-md text-soft-white uppercase mb-6 tracking-widest">Thông tin Liên hệ</h4>
+<div class="space-y-4 font-body-md text-body-md text-soft-white/70">
+<p class="flex items-start gap-3">
+<span class="material-symbols-outlined text-dynamic-pink">location_on</span>
+                    Văn phòng điều hành COUPLE GROUP<br>194 DE Pasteur, Phường Võ Thị Sáu, Quận 3, TP. Hồ Chí Minh
+                </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-dynamic-pink">mail</span>
+                    contact@couplegroup.com
+                </p>
+<p class="flex items-center gap-3">
+<span class="material-symbols-outlined text-dynamic-pink">call</span>
+                    028 7306 6562
+                </p>
+</div>
+</div>
+</footer><div class="w-full py-6 px-margin-desktop bg-ink-black text-soft-white/50 text-[12px] flex flex-col md:flex-row justify-between items-center border-t border-white/5">
+<p class="">© 2024 Couple Group. Tất cả các quyền được bảo lưu.</p>
+<p class="">Được xây dựng cho tương lai của phong cách sống.</p>
+</div>
+<script>
+        // Simple header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'bg-soft-white/95', 'backdrop-blur-md');
+                header.classList.remove('h-20');
+                header.classList.add('h-16');
+            } else {
+                header.classList.remove('py-2', 'bg-soft-white/95', 'backdrop-blur-md');
+                header.classList.add('h-20');
+                header.classList.remove('h-16');
+            }
+        });
+
+        // Simple smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+
+
+
+
+</body></html>
