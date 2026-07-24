@@ -432,5 +432,16 @@ function closeMenu() {
 menuToggle.addEventListener("click", openMenu);
 menuClose.addEventListener("click", closeMenu);
 overlay.addEventListener("click", closeMenu);
+document.addEventListener("click", function (e) {
+    const isDrawerOpen = !drawer.classList.contains("translate-x-full");
+
+    if (
+        isDrawerOpen &&
+        !drawer.contains(e.target) &&
+        !menuToggle.contains(e.target)
+    ) {
+        closeMenu();
+    }
+});
     </script>
 </body></html>
