@@ -7,6 +7,8 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -143,10 +145,10 @@
 </nav>
 </div>
 </header>
-<main class="pt-20">
-<!-- Hero Section -->
+<main class="pt-0">
+<!-- Hero Section (Exactly as source) -->
 <section class="relative h-[819px] w-full overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLv60FH3bYkWdcu6WfPS9gcP_eZg0kBay4C_o188cCgEZ_PuGRq3tVkNJSe7cC8yzfmRKr1o1b5C_kdKIR8V4a6SSegCcAX9qfUM4Q8pHvDyRptHG6w1_w0EfHUi9FX7MXC0X-5D-hrgXuEpk8t-gTcnc1PcZNkZ-2xNy2p0yULks5jysjIrbXFR40mLniU2EHQTKP7KqSz6ZnFpDnSoEfQzSmd7EOrYbJ1cnIjZ1BGNagoC6hehmLB40iA')"></div>
+<div class="absolute inset-0 bg-cover bg-center" style='background-image: url("heart.webp");'></div>
 <div class="absolute inset-0 hero-gradient"></div>
 <div class="relative z-10 h-full flex flex-col justify-center px-margin-desktop max-w-container-max mx-auto text-soft-white">
 <div class="inline-flex items-center space-x-2 mb-6">
@@ -157,210 +159,170 @@
 <p class="font-body-lg text-body-lg max-w-xl opacity-90 mb-10">Chia sẻ tình yêu để cuộc sống trở nên tốt đẹp và giá trị hơn. Đồng hành cùng những mảnh đời kém may mắn trên khắp Việt Nam.</p>
 <div class="flex flex-wrap gap-4">
 <button class="bg-dynamic-pink text-soft-white px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-secondary-container transition-all flex items-center space-x-2">
-<span>Tham Gia Cùng Chúng Tôi</span>
+<span class="">Tham Gia Cùng Chúng Tôi</span>
 <span class="material-symbols-outlined">favorite</span>
 </button>
 </div>
 </div>
 </section>
-<!-- Mission Section -->
-<section class="py-24 bg-soft-white">
+<!-- Section 1: Introduction -->
+<section class="py-32 bg-soft-white">
+<div class="max-w-3xl mx-auto px-margin-mobile text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 uppercase tracking-wide">Couple Foundation</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed font-body-md">
+            Chúng tôi tin rằng mỗi hành động nhỏ đều có sức mạnh thay đổi cuộc đời. Quỹ Couple Foundation là nơi kết nối những tấm lòng nhân ái, cùng nhau xây dựng một cộng đồng tốt đẹp và tràn đầy yêu thương.
+        </p>
+</div>
+</section>
+<!-- Section 2: Hero Impact -->
+<section class="pb-24 bg-soft-white">
 <div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="flex flex-col md:flex-row items-center gap-16">
-<div class="w-full md:w-1/2">
-<div class="relative rounded-2xl overflow-hidden shadow-premium">
-<img alt="Sứ mệnh Couple Foundation" class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuFxVRV21sKJMoCKPVE02iDVA8C1_IUz962EEYj_ETs1E1PAsHuqUu7J9h0THhtFKRyTGhk2GX1HemXyzmA00bSpCLhS_0CBdgPLwxAkNHvQBl5UVUEIG7QKn76-TQU2bejUs3TAXZysgVdOFQenFXIYJZj0I--2oTVhnPwnWGXsnxDwYsAs6Z-CYv7Dlwa7Y73th_IFYyuI0Kg4A_hyfi1MR5mRrXx_9qFlnj5DZ1RWu6Vrvxf42ObrGc"/>
-<div class="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black/60 to-transparent">
-<p class="text-soft-white font-headline-md">Sứ mệnh "Kết nối trái tim"</p>
+<div class="relative rounded-[32px] overflow-hidden shadow-premium mb-12">
+<img alt="Impact Hero" class="w-full aspect-[21/9] object-cover" src="thiennguyen.webp"/>
 </div>
-</div>
-</div>
-<div class="w-full md:w-1/2 space-y-8">
-<div class="space-y-4">
-<h2 class="font-headline-lg text-headline-lg text-primary">Lan tỏa yêu thương và hạnh phúc</h2>
-<div class="w-20 h-1 bg-dynamic-pink rounded-full"></div>
-</div>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                            Được hình thành và hoạt động từ năm 2010 bởi tập đoàn Couple Group, quỹ thiện nguyện Couple Foundation mang trong mình sứ mệnh giúp đỡ những mảnh đời kém may mắn.
-                        </p>
-<p class="font-body-md text-body-md text-on-surface-variant opacity-80 leading-relaxed">
-                            Mỗi người đều có những hành trình, câu chuyện riêng nhưng sâu thẳm đều có một trái tim khát khao được yêu thương &amp; sẵn sàng sẻ chia đến người khác. Couple Foundation mang trong mình sứ mệnh “Kết nối trái tim” không chỉ giúp người được nhận thấy trân trọng hơn cuộc đời, mà chính người trao đi cũng tìm ra những giá trị hạnh phúc.
-                        </p>
-<div class="grid grid-cols-2 gap-8 pt-6">
-<div>
-<h4 class="font-display-lg text-headline-lg text-dynamic-pink mb-1">12+</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter">Năm hoạt động</p>
-</div>
-<div>
-<h4 class="font-display-lg text-headline-lg text-dynamic-pink mb-1">50k+</h4>
-<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-tighter">Nụ cười trao đi</p>
-</div>
-</div>
-</div>
+<div class="max-w-2xl">
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Tác động cộng đồng bền vững</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">Hơn một thập kỷ qua, chúng tôi đã không ngừng nỗ lực để mang lại những thay đổi tích cực, từ giáo dục, y tế đến cứu trợ khẩn cấp cho những vùng khó khăn nhất.</p>
 </div>
 </div>
 </section>
-<!-- Core Activities Grid -->
+<!-- Section 3: Activities Grid -->
 <section class="py-24 bg-surface-container-lowest">
 <div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="mb-16 text-center">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-4 uppercase tracking-wider">Hành trình kết nối trái tim</h2>
-<p class="text-on-surface-variant max-w-2xl mx-auto">Những cột mốc ý nghĩa trên hành trình phụng sự cộng đồng của Couple Group.</p>
-</div>
-<div class="bento-grid">
-<!-- Feature Activity 1 -->
-<div class="col-span-2 row-span-2 group relative overflow-hidden rounded-2xl shadow-sm">
-<img alt="Hành trình Phan Rang" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLvpxGRNsAgd-lXWaM1Y-iELi__qgHQw_cN5CfWwyI9Q2jhVkHuHVvoCYJm2_T7YNvbnXTd_tLQeuMHF7pc6xp__jn6Q0P4yyuN4YrLZbHw7QZ18GcyyObjSMsf411gRUPHnJtCbiam2gqV7dSIelYSxQ6R0nWCE69pfviDWLz62tTeq6H5sXek3KxirGqZTPaSoxoyiOToDf1fiZcFkmJdHypta7lQF90SZKNFk3XvNBZT67GHKJEuwvg"/>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent p-8 flex flex-col justify-end">
-<span class="bg-dynamic-pink text-soft-white px-3 py-1 text-label-sm rounded w-max mb-4">Hoạt động tiêu biểu</span>
-<h3 class="text-soft-white font-headline-md mb-2">Hành trình thiện nguyện tại Phan Rang</h3>
-<p class="text-soft-white/80 font-body-md line-clamp-2">12 năm "Áo khoác cũ đổi mới" trao hơi ấm, góp yêu thương cho đồng bào dân tộc thiểu số.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Activity Card 1 -->
+<div class="bg-soft-white rounded-[2rem] overflow-hidden shadow-soft card-lift flex flex-col">
+<img alt="Hoạt động 1" class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtmxs2yrTHdwxG4rzInMm2fSr3iHOMeVyqPzSOcLrWDe3QlmBapl0LsFgAk_DIjFxpPqxeiqigPcDXMV0kWaAcLX7pRtOK97lBlcbho4IT9YHri5-1qzN90AKNKkAKTRV9bdzNw1aAe06drMlbISgdNF3YI-ycjJNgKMFgi2cDrPGbnxkFrV0Xzor_ijL4BgyZzvSw77cCe3NV9BFzGK-7n_CRk-zS79-wMZSHHWLxDmj6_0Udha4OZkQ"/>
+<div class="p-10 space-y-4">
+<h4 class="font-headline-md text-headline-md text-primary">Áo Khoác Cũ Đổi Mới</h4>
+<p class="font-body-md text-on-surface-variant line-clamp-3">Chương trình thường niên quyên góp và làm mới áo khoác để gửi tặng cho trẻ em vùng cao, mang lại hơi ấm giữa mùa đông giá rét.</p>
 </div>
 </div>
-<!-- Activity 2 -->
-<div class="col-span-2 row-span-1 group relative overflow-hidden rounded-2xl shadow-sm">
-<img alt="Mái ấm Thiên Thần" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsMUmEaSUJ3AMA6PlTcTwwdgB-BDgEeWgGrClVkwYwbDQlnOBR7IcscDpG6CaHk-QSS8-xdjtdtf7Ob2ikhlzvrpkCyHCEjlxnY-YJKL4FegIWmsO_u7rFy2SSZFm3KPad0eDuKzrKCkSMTJNu57SBN8XW3tcdm3JUJEXubMH8G8cYkoKD4_D-0Rr1mF0fvSHuWkHOY_ZWVzTGZskid9ceS5CohQA_u_aAfOCqmyGxAA12YB7jdBjQ6IQ"/>
-<div class="absolute inset-0 bg-black/40 p-6 flex flex-col justify-end">
-<h3 class="text-soft-white font-headline-md text-lg">Mái ấm Thiên Thần</h3>
+<!-- Activity Card 2 -->
+<div class="bg-soft-white rounded-[2rem] overflow-hidden shadow-soft card-lift flex flex-col">
+<img alt="Hoạt động 2" class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLu_36qwHDTIVSDbHCN7AmY3v-FefYer5BeOhML1dNAwLnp0ZiXrhzbQRcX_po7Ss_IxZvuvmim8Tbrcs6YmpmBA7quqVV3xxByGcqlrmdhl7LIrptoxSr3e2oHzALXaIQo-hH-977J8Iv6Nz5JpLNrsFZr6NQTS0D2Y0ZBtrejA-Bo1YZ4QwmrYKs37TxcRfmqG4TGfIlc0p3Q3GMTx8I5Vov7qA-ZgSGj0iwmfnCHsgBgvxe2iYGnpnw"/>
+<div class="p-10 space-y-4">
+<h4 class="font-headline-md text-headline-md text-primary">Mái Ấm Thiên Thần</h4>
+<p class="font-body-md text-on-surface-variant line-clamp-3">Dự án bảo trợ và chăm sóc trẻ em mồ côi, cung cấp môi trường sống an toàn và cơ hội học tập phát triển toàn diện.</p>
 </div>
 </div>
-<!-- Activity 3 -->
-<div class="col-span-1 row-span-1 group relative overflow-hidden rounded-2xl shadow-sm">
-<img alt="Xuân Yêu Thương" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsuGBRnwkrjp5t4xkt4O343I7JMwluw8G6EO0JcwH_UhYj8360Zxm6OfIKGQOm26tSFxSu9xzRKRiKRImQWl6lqQrx90LqufoFJdXykoDk94kGqVpPeFhACRtVXtY0gG9Cz5-7RSHRHOc50ca48DV6c_N0egL25ZiOOIqfr1O-rc6IAxUBnD08QdJ_6unnIpNz__mvL2bFE2TQWj9Emdr8Z5oH-1pEX06YCdcuN0O05siWc0WM1eVAPV9c"/>
-<div class="absolute inset-0 bg-black/40 p-6 flex flex-col justify-end">
-<h3 class="text-soft-white font-label-md">Xuân Yêu Thương</h3>
+<!-- Activity Card 3 -->
+<div class="bg-soft-white rounded-[2rem] overflow-hidden shadow-soft card-lift flex flex-col">
+<img alt="Hoạt động 3" class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLs_234hpT2HJYVJYmkLJuRbj0w2M6tLUTySDaL0htve4I2vx4iGKP2SiXXifOdo4y7CuaB3KkWEnXHzOahB3pn3yNfN3SW29TcjClqtjz-LIdIK_CVv7iXOfyve2--ct-YMo57mAIR1of7YCEU2u3KY7oJS7hY7c_C6KBoh1_4xuCFLGYX7L2eszUfYu5ap96BfcjPlmiarjkngoGhcQJpmp_MK6CkN9TbtpvcJjB3k6A5EO-Oz8F70HAc"/>
+<div class="p-10 space-y-4">
+<h4 class="font-headline-md text-headline-md text-primary">Xuân Yêu Thương</h4>
+<p class="font-body-md text-on-surface-variant line-clamp-3">Trao tặng những phần quà Tết ý nghĩa cho các gia đình có hoàn cảnh khó khăn, cùng nhau đón một cái Tết ấm no và trọn vẹn.</p>
 </div>
 </div>
-<!-- Activity 4 -->
-<div class="col-span-1 row-span-1 group relative overflow-hidden rounded-2xl shadow-sm">
-<img alt="Bảo trợ Người già" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsTkDofhtnj0alGZpiKVXxYJbQ2EZffEnDY1n6lgdCOmxdyTbRp1Lk5wudPIo06jbb9Ao8XxaHSjwmgqLetXK8VbAY7McpfOTjw_8cz4gd1cfyv09pI6R3LZkWfVGU5fvOm90gkBmX5VhtqXLUSNSz1IjBwnJ7XMyjNE1CRaLw6nriRE6tTYSJr-yCgG29BCvhCCY0qpKBAnrhk0JyZFNnxtejv4yZV-TbV-NjXRxJRwIscusRBs6Js7ag"/>
-<div class="absolute inset-0 bg-black/40 p-6 flex flex-col justify-end">
-<h3 class="text-soft-white font-label-md">Bảo trợ Người già Thiên Ân</h3>
+<!-- Activity Card 4 -->
+<div class="bg-soft-white rounded-[2rem] overflow-hidden shadow-soft card-lift flex flex-col">
+<img alt="Hoạt động 4" class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsoctYQGIN4mQPHLrYtwj5VoHnVhu__kj75wIdhaPpjAKCFlsbrN7Hc9AlenZz_dnsTUM8Pugq-dfjVmVWSI7B3mkEBSL5YToc2Ty3K0zz8LxAEZxJd4aZM1f-BkOYUhOOZeltBmzXCQUdGpBd6pzqcs2VtHALDPK9-sattnxF9Ka0A7p1Ai_QPZdeMs3PwIhfufP8D9NzBpWaS8vbWYJ-twb7OA_22JkT0p7K-M8TzRWhhIe-CR3KTKjk"/>
+<div class="p-10 space-y-4">
+<h4 class="font-headline-md text-headline-md text-primary">Bảo Trợ Người Già</h4>
+<p class="font-body-md text-on-surface-variant line-clamp-3">Đồng hành cùng các trung tâm dưỡng lão, chăm sóc sức khỏe và tinh thần cho những người cao tuổi không nơi nương tựa.</p>
 </div>
 </div>
-</div>
-<!-- Additional Article Image -->
-<div class="mt-12 hidden md:block">
-<img alt="Gắn kết cộng đồng" class="w-full h-[400px] object-cover rounded-2xl shadow-sm" src="https://lh3.googleusercontent.com/aida/AP1WRLtrQY6MunH56U5yrpQIMipfVtCurklGHH3tWVTrA93lRcvuFa41pNk_D5CzkoL-uVxWm7bnidblOXXhzgvZBU5ikn11wJhpBaYQeFFUXANM7zbgFEy0A_gElu8DV6z-g9xGRMR2JZYdpKlp5WbVIeuIAfR91k4AKUkDuQp9Z0uSeYVw-PyTE0YovG9pBSJKQiAENZrs118h5REqGiAaS6geH-GrwH-8lbmACZFABxOB_Eg_OPVKuh-sZw"/>
 </div>
 </div>
 </section>
-<!-- Foundation Gallery Grid -->
+<!-- Section 4: Highlights -->
 <section class="py-24 bg-soft-white">
 <div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="flex justify-between items-end mb-12">
-<div class="max-w-xl">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Chiếc hộp yêu thương &amp; Khoảnh khắc</h2>
-<p class="text-on-surface-variant">Happy Box - Sáng kiến gắn kết tấm lòng của mọi khách hàng và nhân viên Couple Group.</p>
-</div>
-<button class="text-dynamic-pink font-bold flex items-center space-x-2 hover:translate-x-1 transition-transform">
-<span>Xem toàn bộ thư viện</span>
+<div class="bg-surface-container-low rounded-[2.5rem] p-12 md:p-20 text-center space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">Dấu ấn từ những hành trình</h2>
+<p class="font-body-lg text-on-surface-variant max-w-3xl mx-auto">Mỗi cây số chúng tôi đi qua đều để lại những câu chuyện cảm động và những nụ cười hạnh phúc. Hãy cùng khám phá chi tiết hơn về các dự án trọng điểm của quỹ.</p>
+<button class="bg-primary text-soft-white px-10 py-4 rounded-lg font-bold hover:bg-deep-navy transition-all flex items-center space-x-2 mx-auto">
+<span>Tìm hiểu thêm</span>
 <span class="material-symbols-outlined">arrow_forward</span>
 </button>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
-<!-- Gallery Item 1 -->
-<div class="group cursor-pointer overflow-hidden rounded-xl shadow-sm">
-<img alt="Gallery 1" class="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtnR9MVcCmAjZJEvKmpwnmdca9movjEzyji5ACG9EOwE4cgEjb1f9BRIGt0NOumxRBLEuyfMNTBaZJQ25AksyEppa2staKVnufDeMRg0eSj-DOGFMUhck3B3ypA1FnV1SmdFuT7xiSz8zOyoGLXVKFeqlvMKWkbQIReaoxULtsZCcRCtOOF6-B9n9yegSdCvzMj4EMUFyMxiL5af4TqrUpoIVPO37SVddF7ZaksbZ-danLrLzslI_I_hQ"/>
 </div>
-<!-- Gallery Item 2 -->
-<div class="group cursor-pointer overflow-hidden rounded-xl shadow-sm">
-<img alt="Gallery 2" class="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuEVm8feu6mbxrVts92mW0Kv-Ve5r5QvzDrfSV_ic7qGjA6C_YbMagjuKkNEm9N7vsFfDk2lfxoCtObwHc7aLUz5Fzla0zbrR3re2pU1tCnCqDKlGWwS082h7O6UmoSWXd9W-jPanOzFOhqOyXHbDALeOquP4LE3iDAUEGlRa8sbeJ3LPYhgA1IkGHHTV8x-t4sfBsvujPgSksLFrQfJXsGxEG4Npqi127RP9EMvYftj3T-HveEGIZhpEM"/>
+</section>
+<!-- Section 5: Activity Gallery -->
+<section class="py-24 bg-soft-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="font-headline-md text-headline-md text-primary mb-12">Khoảnh khắc Couple Foundation</h2>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<div class="overflow-hidden rounded-2xl group">
+<img alt="Gallery 1" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvl6qack26N-4u02k_XnKs8CxbHMooB9-gwOAOremRtCPkkeFBAey4gs0yYWcVQ_1eoQJDRdewHK3h2Km2wuOrasXkGnzB8m8JyR0jGZb75kwTtiJnDkV35NN0MGAq3nqEMoss8u6GJa0gXrUeyb80Klk_kxhcplMV3LdDWWMGr9TeApN9ZclA6JWk1p3u6Cq1fHQylpthfrO2tIGpZXlUBKHELTH1Q5j8_TQlzA6zyfTcPdBULzmr4WEM"/>
 </div>
-<!-- Gallery Item 3 -->
-<div class="group cursor-pointer overflow-hidden rounded-xl shadow-sm">
-<img alt="Gallery 3" class="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuV72xrWMJG7irJaLtSEPKLl27yDFY4OCwJjI8oTazWI1akK7kvd1PYNL5stcx09Ux49LeCmIO5aTZFslIoXWK3M6uRS5m3RoQ2xfUxfuYLOnAec-OPiUWnK42v27PZMlCvXXWCEC9PYSaCB8HtgfaMDXUbj5Sh3hSmBEVBrwxri0LG39rSKpxF7P6tTv1UtVY0H0RzWl1Q2fWWgSIS8wpi5PRtV5eh0EVDdP_BZ-VWL5WlUjuSwAio_Q"/>
+<div class="overflow-hidden rounded-2xl group">
+<img alt="Gallery 2" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuzi0F-QzGQ0QvR5xmghDA6uFhJnnav2d8WFes_6XJ_fpIpMBLbkDjMeGDXXF0fye2IqHoCuH4vR3zVVVify4-LhMv0tIP9j_fduhMexcRzNmwDWB-aqAN5Ji_33H0g952TeuGvmPQCjF-nS5bbNmWzoXPvRvDahvKXKBuBDhu7CfBh8BvfMOzJ4iuOO_-52EG5v_TCaDbwE1kYeCt-xnYuhfKbp0j1vgbvbnm-Yc-4DaGEpX-QpDeZfvA"/>
 </div>
-<!-- Gallery Item 4 -->
-<div class="group cursor-pointer overflow-hidden rounded-xl shadow-sm">
-<img alt="Gallery 4" class="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLtnR9MVcCmAjZJEvKmpwnmdca9movjEzyji5ACG9EOwE4cgEjb1f9BRIGt0NOumxRBLEuyfMNTBaZJQ25AksyEppa2staKVnufDeMRg0eSj-DOGFMUhck3B3ypA1FnV1SmdFuT7xiSz8zOyoGLXVKFeqlvMKWkbQIReaoxULtsZCcRCtOOF6-B9n9yegSdCvzMj4EMUFyMxiL5af4TqrUpoIVPO37SVddF7ZaksbZ-danLrLzslI_I_hQ"/>
+<div class="overflow-hidden rounded-2xl group">
+<img alt="Gallery 3" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuYHxRWulW8P1TFjRz47whpjyIhW6zs0TPs2tpMpD7Uz4K2IsZM1v3m1v85RMVyF57WoI7XxmXgK1lFJC4XrlnxkX8DiuRTvH1yOM58K2VeTXQ5t1bHS1iB61tvh9UAYS-XCM2aza2lMz5KpL8vzScLzb2uHMNIz6eAvQucCDemtMvQf2sin0mItdKu0fgxzCpzHuNX3gR_9wj2xQpRdre_GHeYeexYz7JQ1J1UrfHEZvEfK9XVD9gTXA"/>
 </div>
-<!-- Gallery Item 5 -->
-<div class="group cursor-pointer overflow-hidden rounded-xl shadow-sm">
-<img alt="Gallery 5" class="w-full h-[300px] object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuV72xrWMJG7irJaLtSEPKLl27yDFY4OCwJjI8oTazWI1akK7kvd1PYNL5stcx09Ux49LeCmIO5aTZFslIoXWK3M6uRS5m3RoQ2xfUxfuYLOnAec-OPiUWnK42v27PZMlCvXXWCEC9PYSaCB8HtgfaMDXUbj5Sh3hSmBEVBrwxri0LG39rSKpxF7P6tTv1UtVY0H0RzWl1Q2fWWgSIS8wpi5PRtV5eh0EVDdP_BZ-VWL5WlUjuSwAio_Q"/>
+<div class="overflow-hidden rounded-2xl group">
+<img alt="Gallery 4" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLvl6qack26N-4u02k_XnKs8CxbHMooB9-gwOAOremRtCPkkeFBAey4gs0yYWcVQ_1eoQJDRdewHK3h2Km2wuOrasXkGnzB8m8JyR0jGZb75kwTtiJnDkV35NN0MGAq3nqEMoss8u6GJa0gXrUeyb80Klk_kxhcplMV3LdDWWMGr9TeApN9ZclA6JWk1p3u6Cq1fHQylpthfrO2tIGpZXlUBKHELTH1Q5j8_TQlzA6zyfTcPdBULzmr4WEM"/>
+</div>
+<div class="overflow-hidden rounded-2xl group">
+<img alt="Gallery 5" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuYHxRWulW8P1TFjRz47whpjyIhW6zs0TPs2tpMpD7Uz4K2IsZM1v3m1v85RMVyF57WoI7XxmXgK1lFJC4XrlnxkX8DiuRTvH1yOM58K2VeTXQ5t1bHS1iB61tvh9UAYS-XCM2aza2lMz5KpL8vzScLzb2uHMNIz6eAvQucCDemtMvQf2sin0mItdKu0fgxzCpzHuNX3gR_9wj2xQpRdre_GHeYeexYz7JQ1J1UrfHEZvEfK9XVD9gTXA"/>
 </div>
 </div>
 </div>
 </section>
-<!-- CTA Section -->
-<section class="py-20">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="bg-primary rounded-[2rem] p-12 md:p-20 relative overflow-hidden">
-<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
-<svg class="w-full h-full fill-current text-soft-white" viewbox="0 0 100 100">
-<path d="M50 85c-1.5 0-3-.6-4.2-1.8L12.5 50.3C6.3 44 6.3 33.7 12.6 27.5c6.3-6.2 16.5-6.2 22.8 0L50 42.1l14.6-14.6c6.3-6.2 16.5-6.2 22.8 0s6.3 16.5 0 22.8L54.2 83.2c-1.2 1.2-2.7 1.8-4.2 1.8z"></path>
-</svg>
-</div>
-<div class="relative z-10 max-w-2xl">
-<h2 class="text-soft-white font-display-lg text-headline-lg mb-6 leading-tight">Bạn đã sẵn sàng để trở thành một phần của hành trình?</h2>
-<p class="text-soft-white/80 font-body-lg mb-10">Mỗi sự đóng góp, dù nhỏ bé, đều có thể thay đổi cả một cuộc đời. Hãy cùng chúng tôi viết tiếp những câu chuyện đẹp.</p>
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="bg-dynamic-pink text-soft-white px-10 py-4 rounded-lg font-bold hover:bg-secondary-container transition-all">Đóng góp ngay</button>
-<button class="border border-soft-white text-soft-white px-10 py-4 rounded-lg font-bold hover:bg-soft-white/10 transition-all">Đăng ký tình nguyện viên</button>
-</div>
-</div>
+<!-- Section 6: Final CTA -->
+<section class="bg-primary py-24">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center text-soft-white">
+<h2 class="font-display-lg text-display-lg mb-8 leading-tight">Cùng chúng tôi viết tiếp hành trình hạnh phúc</h2>
+<p class="font-body-lg text-soft-white/80 max-w-2xl mx-auto mb-12">Sự đồng hành của bạn là động lực to lớn nhất để chúng tôi tiếp tục lan tỏa những giá trị nhân văn đến cộng đồng.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-dynamic-pink text-soft-white px-12 py-4 rounded-lg font-bold hover:bg-secondary-container transition-all">Đồng hành cùng chúng tôi</button>
+<button class="border border-soft-white text-soft-white px-12 py-4 rounded-lg font-bold hover:bg-soft-white/10 transition-all">Liên hệ</button>
 </div>
 </div>
 </section>
 </main>
 <!-- Footer (Synced from Home) -->
-<footer class="w-full px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-primary dark:bg-ink-black text-soft-white pt-20 pb-0">
-<div class="max-w-sm">
-<span class="font-headline-md text-headline-md text-soft-white font-bold block mb-6">Couple Group</span>
-<p class="font-body-md text-body-md text-soft-white/70 mb-8">
-                Dẫn đầu trong lĩnh vực thời trang và phong cách sống từ năm 2010. Di sản Việt Nam, tầm nhìn toàn cầu.
-            </p>
-<div class="flex gap-4">
-<a class="w-12 h-12 rounded-full border border-soft-white/20 flex items-center justify-center hover:bg-dynamic-pink hover:border-dynamic-pink transition-all" href="#">
-<span class="material-symbols-outlined">face_nod</span>
-</a>
-<a class="w-12 h-12 rounded-full border border-soft-white/20 flex items-center justify-center hover:bg-dynamic-pink hover:border-dynamic-pink transition-all" href="#">
-<span class="material-symbols-outlined">play_circle</span>
-</a>
+<footer class="w-full bg-primary text-soft-white pt-32 pb-0 border-t border-white/5 relative overflow-hidden">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-12 relative z-10 pb-12 px-margin-desktop">
+<div class="max-w-md space-y-6">
+<span class="font-montserrat text-[24px] font-extrabold block tracking-tight">Couple Group</span>
+<p class="text-soft-white/60 editorial-text leading-relaxed">
+          Dẫn đầu trong lĩnh vực thời trang và phong cách sống từ năm 2010. Di sản Việt Nam, tầm nhìn toàn cầu.
+</p>
+<div class="flex gap-5">
+    <a class="w-12 h-12 rounded-xl border border-soft-white/10 flex items-center justify-center hover:bg-dynamic-pink transition-all"
+       href="https://www.facebook.com/couplegroup.2020"
+       target="_blank">
+
+        <i class="fa-brands fa-facebook-f text-xl"></i>
+
+    </a>
+
+    <a class="w-12 h-12 rounded-xl border border-soft-white/10 flex items-center justify-center hover:bg-dynamic-pink transition-all"
+       href="https://www.youtube.com/@COUPLETX09"
+       target="_blank">
+
+        <i class="fa-brands fa-youtube text-xl"></i>
+
+    </a>
 </div>
 </div>
-<div class="grid grid-cols-2 gap-16">
-<div>
-<h4 class="font-label-md text-label-md text-soft-white uppercase mb-6 tracking-widest">Công ty</h4>
-<ul class="space-y-4">
-<li><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Trang chủ</a></li>
-<li><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Giới thiệu</a></li>
-<li><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Thành viên</a></li>
-<li><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Tuyển dụng</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-md text-label-md text-soft-white uppercase mb-6 tracking-widest">Hỗ trợ</h4>
-<ul class="space-y-4">
-<li><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Chính sách bảo mật</a></li>
-<li><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Điều khoản dịch vụ</a></li>
-<li><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Chính sách Cookie</a></li>
-<li><a class="text-soft-white/80 hover:text-dynamic-pink transition-colors font-body-md text-body-md" href="#">Liên hệ</a></li>
-</ul>
-</div>
-</div>
-<div class="max-w-sm">
-<h4 class="font-label-md text-label-md text-soft-white uppercase mb-6 tracking-widest">Thông tin Liên hệ</h4>
-<div class="space-y-4 font-body-md text-body-md text-soft-white/70">
-<p class="flex items-start gap-3">
-<span class="material-symbols-outlined text-dynamic-pink">location_on</span>
-                    Văn phòng điều hành COUPLE GROUP<br/>194 DE Pasteur, Phường Võ Thị Sáu, Quận 3, TP. Hồ Chí Minh
-                </p>
-<p class="flex items-center gap-3">
+
+<div class="max-w-sm space-y-6">
+<h4 class="text-[12px] font-bold uppercase tracking-[0.3em] opacity-50">Thông tin Liên hệ</h4>
+<div class="space-y-4 text-soft-white/60 text-[15px]">
+<p class="flex items-start gap-4">
+<span class="material-symbols-outlined text-dynamic-pink mt-1">location_on</span>
+            Văn phòng điều hành COUPLE GROUP<br/>194 DE Pasteur, Phường Xuân Hòa, TP. Hồ Chí Minh
+          </p>
+<p class="flex items-center gap-4">
 <span class="material-symbols-outlined text-dynamic-pink">mail</span>
-                    contact@couplegroup.com
-                </p>
-<p class="flex items-center gap-3">
+            contact@couplegroup.com
+          </p>
+<p class="flex items-center gap-4">
 <span class="material-symbols-outlined text-dynamic-pink">call</span>
-                    028 7306 6562
-                </p>
+            028 7306 6562
+          </p>
 </div>
+</div>
+</div>
+<div class="w-full py-4 px-margin-desktop bg-ink-black text-soft-white/50 text-[12px] flex flex-col md:flex-row justify-between items-center border-t border-white/5">
+<p class="">© 2024 Couple Group. Tất cả các quyền được bảo lưu.</p>
+<p class="">Được xây dựng cho tương lai của phong cách sống.</p>
 </div>
 </footer>
-<div class="w-full py-6 px-margin-desktop bg-ink-black text-soft-white/50 text-[12px] flex flex-col md:flex-row justify-between items-center border-t border-white/5">
-<p>© 2024 Couple Group. Tất cả các quyền được bảo lưu.</p>
-<p>Được xây dựng cho tương lai của phong cách sống.</p>
-</div>
 <script>
         // Simple scroll interaction for Header
         window.addEventListener('scroll', () => {
