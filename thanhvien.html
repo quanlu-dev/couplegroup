@@ -3,7 +3,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Công ty Thành viên | Couple Group</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -80,6 +80,7 @@
                             "gutter": "24px"
                         },
                         "fontFamily": {
+                        montserrat: ["Montserrat"],
                             "body-md": ["Inter"],
                             "body-lg": ["Inter"],
                             "display-lg-mobile": ["Montserrat"],
@@ -121,6 +122,34 @@
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        .editorial-text { letter-spacing: -0.01em; }
+        .hero-title-entrance { animation: fadeInUp 1s ease-out forwards; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .bento-card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: translateY(-8px); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+
+        /* Floating Animations */
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-1 { animation: floating 6s ease-in-out infinite; }
+        .float-2 { animation: floating 7s ease-in-out infinite; animation-delay: 1s; }
+        .float-3 { animation: floating 8s ease-in-out infinite; animation-delay: 0.5s; }
+
+        /* Hover enhancement for hero images */
+        .hero-img-container { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .hero-img-container:hover { 
+            transform: scale(1.05) translateY(-5px) !important; 
+            z-index: 20;
+            filter: drop-shadow(0 25px 30px rgba(0,0,0,0.15));
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
@@ -133,7 +162,7 @@
     <img
         alt="Couple Group Logo"
         class="w-auto h-10 lg:h-12 object-contain"
-        src="logo-removebg-preview.png"
+        src="assets/logo-removebg-preview.png"
     />
     <span class="ml-3 font-montserrat text-lg lg:text-2xl font-bold text-ink-black tracking-tight">
         Couple Group
@@ -170,7 +199,7 @@
     <div class="flex items-center justify-between p-6 border-b">
 
         <div class="flex items-center">
-            <img src="logo-removebg-preview.png"
+            <img src="assets/logo-removebg-preview.png"
                  class="h-8 w-auto">
             <span class="ml-3 font-bold text-ink-black">
                 Couple Group
@@ -217,120 +246,471 @@
 </header>
 <main>
 <!-- Hero Section -->
-<section class="relative h-[614px] md:h-[716px] flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="A wide cinematic landscape of a modern corporate group featuring a diverse team of smiling professionals standing together in front of a sustainable wind turbine field. The lighting is warm and bright, conveying a sense of unity and visionary leadership. The aesthetic is premium and professional, with clear skies and a high-fashion digital feel consistent with the Couple Group brand." src="slideshow_1.webp">
-<div class="absolute inset-0 bg-gradient-to-r from-deep-navy/20 to-transparent"></div>
+<section class="relative flex flex-col lg:flex-row items-center justify-start overflow-hidden bg-white pt-32 pb-16 lg:py-44 h-auto lg:h-[700px]">
+<div class="relative lg:absolute lg:top-[110px] lg:-right-0 w-full lg:w-[60%] h-auto lg:h-[calc(100%-110px)] z-0 lg:rounded-[40px] overflow-hidden order-2 lg:order-none mt-12 lg:mt-0">
+<!-- Hero Images with Animations -->
+<div class="w-full h-full grid grid-cols-3 gap-4 p-6">
+
+    <!-- Couple TX -->
+    <div class="flex flex-col justify-center hero-img-container float-1">
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full aspect-[9/16] object-cover rounded-xl shadow-lg transition-all duration-300">
+            <source src="assets/CTX Animation.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Trường Thắng -->
+    <div class="flex flex-col justify-center hero-img-container float-2">
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full aspect-[9/16] object-cover rounded-xl shadow-lg transition-all duration-300">
+            <source src="assets/TRUONG THANG Animation.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- EpicSport -->
+    <div class="flex flex-col justify-center hero-img-container float-3">
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full aspect-[9/16] object-cover rounded-xl shadow-lg transition-all duration-300">
+            <source src="assets/EPICSPORT Animation.mp4" type="video/mp4">
+        </video>
+    </div>
+
 </div>
-<div class="relative z-10 max-w-container-max mx-auto px-margin-desktop w-full">
-<div class="max-w-2xl">
-<h1 class="text-soft-white font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Hệ sinh thái Couple Group</h1>
-<p class="text-soft-white/90 font-body-lg text-body-lg mb-8">Kiến tạo những giá trị bền vững và phong cách sống hiện đại thông qua mạng lưới các đơn vị thành viên hàng đầu trong lĩnh vực thời trang, sản xuất và dịch vụ.</p>
-<div class="flex gap-4">
-<a class="bg-dynamic-pink text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:scale-105 transition-transform inline-block" href="#member-sections">Khám phá ngay</a>
+</div>
+<div class="container mx-auto px-margin-desktop relative z-10 order-1 lg:order-none">
+<div class="max-w-2xl hero-title-entrance text-left ml-0">
+<span class="inline-block px-4 py-1 bg-dynamic-pink text-white rounded-full font-bold mb-4 tracking-[0.2em] uppercase text-[10px]">Member Companies</span>
+<h1 class="font-montserrat font-extrabold leading-[1.1] editorial-text uppercase text-[#243447]">
+<span class="block text-[44px] lg:text-[50px]">
+                        HỆ SINH THÁI<br/> COUPLE GROUP
+                    </span>
+</h1>
+<div class="flex flex-wrap gap-5 justify-start mt-10">
+<a class="inline-block bg-dynamic-pink text-white px-8 py-4 rounded-lg font-bold hover:shadow-[0_15px_30px_rgba(230,0,126,0.4)] hover:-translate-y-1 transition-all duration-300" href="#member-sections">
+                        Khám phá ngay
+                    </a>
 </div>
 </div>
 </div>
 </section>
 <!-- Member Companies Bento Grid -->
-<section class="py-24 max-w-container-max mx-auto px-margin-desktop" id="member-sections">
-<div class="text-center mb-16">
-<span class="text-dynamic-pink font-label-md text-label-md tracking-widest uppercase">HỆ SINH THÁI</span>
-<h2 class="text-deep-navy font-headline-lg text-headline-lg mt-2">Các Đơn Vị Thành Viên</h2>
-</div>
-<div class="space-y-32">
-<!-- Section 1: Couple TX -->
-<div class="flex flex-col gap-12">
-<h3 class="text-4xl md:text-5xl font-bold text-deep-navy">Couple TX</h3>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="md:col-span-2 h-96 overflow-hidden rounded-3xl shadow-sm group">
-<img alt="Couple TX Store" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="slideshow_1.webp">
-</div>
-<div class="md:col-span-1 flex flex-col gap-6">
-<div class="h-44 overflow-hidden rounded-3xl shadow-sm group">
-<img alt="Couple TX Fashion" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="cptx_thanhvien1.webp">
-</div>
-<div class="h-44 overflow-hidden rounded-3xl shadow-sm group">
-<img alt="Couple TX Lifestyle" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="cptx_thanhvien2.webp">
-</div>
-</div>
-</div>
-<div class="bg-soft-white p-8 md:p-12 rounded-3xl border border-surface-container shadow-sm max-w-4xl">
-<p class="text-lg text-on-surface-variant mb-6 leading-relaxed">Tiên phong xây dựng hệ sinh thái thời trang toàn diện tại Việt Nam, Couple TX không chỉ bán quần áo mà còn kiến tạo một phong cách sống năng động và gắn kết.</p>
-<div class="grid md:grid-cols-2 gap-8">
-<div>
-<h4 class="font-bold text-dynamic-pink uppercase text-xs tracking-widest mb-3">Sứ mệnh</h4>
-<p class="text-sm text-on-surface-variant">Đồng hành cùng khách hàng trong mọi khoảnh khắc cuộc sống thông qua những sản phẩm thời trang chất lượng và trải nghiệm mua sắm tuyệt vời.</p>
-</div>
-<div>
-<h4 class="font-bold text-dynamic-pink uppercase text-xs tracking-widest mb-3">Sản phẩm chủ đạo</h4>
-<p class="text-sm text-on-surface-variant">Thời trang nam, nữ và trẻ em với phong cách trẻ trung, hiện đại, tập trung vào tính ứng dụng cao và sự thoải mái.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Section 2: EpicSport -->
-<div class="flex flex-col gap-12">
-<h3 class="text-4xl md:text-5xl font-bold text-deep-navy">EpicSport</h3>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="md:col-span-2 h-96 overflow-hidden rounded-3xl shadow-sm group">
-<img alt="EpicSport Runner" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="epicsport_thanhvien.webp">
-</div>
-<div class="md:col-span-1 flex flex-col gap-6">
-<div class="h-44 overflow-hidden rounded-3xl shadow-sm group">
-<img alt="EpicSport Gear" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="epicsport_thanhvien1.webp">
-</div>
-<div class="h-44 overflow-hidden rounded-3xl shadow-sm group">
-<img alt="EpicSport Training" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="epicsport_thanhvien2.webp">
+<div id="member-sections">
+<!-- Couple TX Section: Media Right -->
+<section class="py-32 lg:py-40 bg-surface overflow-hidden">
+<div class="container mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+<!-- Content Block -->
+<div class="lg:w-1/2 space-y-12 reveal-on-scroll visible">
+<div class="space-y-6">
+<span class="text-dynamic-pink font-bold tracking-[0.3em] text-xs uppercase block">Introduction</span>
+<h2 class="text-5xl lg:text-6xl font-headline-lg font-extrabold text-deep-navy leading-[1.1]">Couple TX</h2>
+<div class="space-y-4">
+<p class="text-body-lg text-slate-gray leading-relaxed">
+    [Styling Your Experience]
+Ngày 11/07/2009, Couple TX được tạo nên từ một ý tưởng kinh doanh khác biệt và dần phát triển trở
+thành hệ sinh thái thời trang của hai nhà đồng sáng lập. Không chỉ dừng lại ở một thương hiệu thời
+trang đơn thuần, chúng tôi mang trong mình một khát vọng lớn hơn - trở thành thương hiệu của
+phong cách sống, đa dụng, tinh giản và thời thượng.
+Từ một cửa hàng nhỏ, chúng tôi tìm tòi, phát triển kinh doanh, và tiên phong trong việc bán hàng
+trực tuyến. Couple TX tạo nên vị thế thương hiệu, được nhiều khách hàng biết đến, việc phát triển
+kinh doanh tốt hơn, đồng nghĩa với việc chất lượng sản phẩm cũng cần được cải tiến tốt hơn. Chúng
+tôi mở rộng hệ thống, xây dựng quy mô nhà máy sản xuất để làm chủ chất lượng và tạo ra giá trị cho
+hệ sinh thái của chính mình.
+
+</p>
+<p class="text-body-lg text-slate-gray leading-relaxed">
+    Couple TX khẳng định một tinh thần “thời trang chính là sự gắn kết từ chính trải nghiệm sống của
+    mỗi người”, chúng tôi không chạy theo xu hướng ngắn hạn mà tạo nên trang phục:
+</p>
+
+<ul class="list-disc pl-6 mt-4 space-y-2 text-body-lg text-slate-gray leading-relaxed">
+    <li><strong>Đa dụng:</strong> Dễ phối, phù hợp với nhiều dịp và hoạt động hàng ngày.</li>
+
+    <li><strong>Tinh giản:</strong> Thiết kế tinh tế tối giản, tập trung vào công nghệ vải tiên tiến, thân thiện với môi trường.</li>
+
+    <li><strong>Thời thượng:</strong> Mỗi chi tiết thiết kế là cách để bạn thể hiện giá trị sống, tận hưởng và tự tin kể câu chuyện cá nhân qua thời trang.</li>
+</ul>
+
+<p class="text-body-lg text-slate-gray leading-relaxed mt-4">
+    “Styling your experience” là lời tuyên ngôn mà Couple TX mong muốn truyền tải và chúng tôi chính là
+    người bạn đồng hành cùng khách hàng trong mỗi hành trình trải nghiệm vì
+    “Mỗi ngày là một trải nghiệm, mỗi trải nghiệm có thể trở thành phong cách”.
+</p>
 </div>
 </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- MISSION -->
+<div class="premium-card bg-white p-8 rounded-2xl">
+<span class="material-symbols-outlined text-dynamic-pink text-4xl mb-4">star</span>
+<h4 class="font-bold text-deep-navy mb-2 uppercase text-sm tracking-widest">Our Mission</h4>
+<p class="text-slate-gray text-sm leading-relaxed">Thương hiệu thời trang Casual quốc tế khởi nguồn từ Việt Nam dẫn đầu thị trường Đông Nam Á.<br>
+Đồng hành và truyền cảm hứng cho thanh xuân đáng giá của khách hàng.</p>
 </div>
-<div class="bg-soft-white p-8 md:p-12 rounded-3xl border border-surface-container shadow-sm max-w-4xl ml-auto">
-<p class="text-lg text-on-surface-variant mb-6 leading-relaxed">EpicSport là thương hiệu thời trang thể thao chuyên nghiệp, tập trung vào việc tối ưu hóa hiệu suất vận động thông qua công nghệ vải tiên tiến và thiết kế công thái học.</p>
-<div class="grid md:grid-cols-2 gap-8">
-<div>
-<h4 class="font-bold text-dynamic-pink uppercase text-xs tracking-widest mb-3">Sứ mệnh</h4>
-<p class="text-sm text-on-surface-variant">Truyền cảm hứng và hỗ trợ cộng đồng yêu thể thao chinh phục những giới hạn mới của bản thân.</p>
-</div>
-<div>
-<h4 class="font-bold text-dynamic-pink uppercase text-xs tracking-widest mb-3">Điểm nổi bật</h4>
-<p class="text-sm text-on-surface-variant">Công nghệ vải thoáng khí, co giãn 4 chiều và thiết kế tối ưu cho các hoạt động cường độ cao như chạy bộ, gym và yoga.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Section 3: Trường Thắng -->
-<div id="truongthang" class="flex flex-col gap-12">
-<h3 class="text-4xl md:text-5xl font-bold text-deep-navy">Trường Thắng Corp</h3>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="md:col-span-2 h-96 overflow-hidden rounded-3xl shadow-sm group">
-<img alt="Trường Thắng Factory" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="truongthang_thanhvien.webp">
-</div>
-<div class="md:col-span-1 flex flex-col gap-6">
-<div class="h-44 overflow-hidden rounded-3xl shadow-sm group">
-<img alt="Manufacturing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="truongthang_thanhvien1.webp">
-</div>
-<div class="h-44 overflow-hidden rounded-3xl shadow-sm group">
-<img alt="Quality Control" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="tuongthang_thanhvien2.webp">
+<!-- PRODUCT -->
+<div class="premium-card bg-white p-8 rounded-2xl">
+<span class="material-symbols-outlined text-deep-navy text-4xl mb-4">apparel</span>
+<h4 class="font-bold text-deep-navy mb-2 uppercase text-sm tracking-widest">Our Product</h4>
+<p class="text-slate-gray text-sm mb-4">Dòng áo khoác công nghệ<br>
+Dòng sản phẩm bền vững Green EX</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface px-3 py-1 rounded-full text-[10px] font-bold text-slate-gray uppercase">Lifestyle</span>
+<span class="bg-surface px-3 py-1 rounded-full text-[10px] font-bold text-slate-gray uppercase">Sustainable</span>
 </div>
 </div>
+<!-- SUSTAINABILITY -->
+<div class="premium-card bg-white/50 border-l-4 border-l-green-500 p-8 rounded-2xl md:col-span-2">
+    <div class="flex items-start gap-4">
+        <span class="material-symbols-outlined text-green-600 text-3xl">
+            eco
+        </span>
+
+        <div class="flex-1">
+
+            <h4 class="font-bold text-deep-navy uppercase tracking-widest text-sm mb-6">
+                Sustainability (Green EX)
+            </h4>
+
+            <!-- Giới thiệu -->
+            <p class="text-slate-gray leading-relaxed mb-6">
+                Đối với Couple TX, phát triển bền vững không phải là một xu hướng,
+                mà là một lựa chọn lâu dài. Mỗi chất liệu được lựa chọn, mỗi thiết kế
+                được tạo nên đều phản ánh cam kết của thương hiệu trong việc mang đến
+                những sản phẩm bền đẹp, có trách nhiệm và đồng hành cùng khách hàng
+                theo thời gian.
+            </p>
+
+            <!-- Highlight -->
+            <div class="bg-green-50 border border-green-200 rounded-xl p-5 mb-6">
+                <p class="text-xs uppercase tracking-[0.2em] text-green-700 font-semibold">
+                    GREEN EX
+                </p>
+
+                <h5 class="text-xl font-bold text-deep-navy mt-1">
+                    The Sustainable Collection
+                </h5>
+            </div>
+
+            <!-- Nội dung -->
+            <p class="text-slate-gray leading-relaxed">
+                Được phát triển từ các chất liệu thân thiện với môi trường,
+                Green EX là dấu ấn cho hành trình theo đuổi thời trang bền vững
+                của Couple TX. Không chỉ là một dòng sản phẩm, Green EX đại diện
+                cho triết lý thiết kế đề cao sự cân bằng giữa thẩm mỹ, chất lượng
+                và trách nhiệm với tương lai.
+            </p>
+
+        </div>
+    </div>
 </div>
-<div class="bg-soft-white p-8 md:p-12 rounded-3xl border border-surface-container shadow-sm max-w-4xl">
-<p class="text-lg text-on-surface-variant mb-6 leading-relaxed">Trường Thắng Corp là đơn vị sản xuất nòng cốt của hệ sinh thái, sở hữu quy trình sản xuất khép kín đạt tiêu chuẩn quốc tế, chuyên cung ứng cho các thị trường khó tính như Mỹ và Châu Âu.</p>
-<div class="grid md:grid-cols-2 gap-8">
-<div>
-<h4 class="font-bold text-dynamic-pink uppercase text-xs tracking-widest mb-3">Năng lực sản xuất</h4>
-<p class="text-sm text-on-surface-variant">Hệ thống nhà máy hiện đại với công suất lớn, đáp ứng các đơn hàng FOB phức tạp và yêu cầu khắt khe về phát triển bền vững.</p>
-</div>
-<div>
-<h4 class="font-bold text-dynamic-pink uppercase text-xs tracking-widest mb-3">Giá trị cốt lõi</h4>
-<p class="text-sm text-on-surface-variant">Chất lượng vượt trội, tuân thủ đạo đức nghề nghiệp và cam kết bảo vệ môi trường trong từng công đoạn sản xuất.</p>
 </div>
 </div>
+<!-- Media Block: Asymmetric Bento -->
+<div class="lg:w-1/2 relative reveal-on-scroll visible">
+
+    <div class="flex flex-col gap-6">
+
+        <!-- Image 1 -->
+        <div class="h-[650px] rounded-[32px] overflow-hidden bg-[#F8F9FA] media-hover">
+            <img
+                src="assets/thanhvien_cptx_1.jpg"
+                alt="EpicSport"
+                class="w-full h-full object-contain transition duration-500 hover:scale-105">
+        </div>
+
+        <!-- Image 2 -->
+        <div class="h-[500px] rounded-[32px] overflow-hidden bg-[#F8F9FA] media-hover">
+            <img
+                src="assets/thanhvien_cptx_2.jpg"
+                alt="EpicSport Detail 1"
+                class="w-full h-full object-contain transition duration-500 hover:scale-105">
+        </div>
+
+        <!-- Image 3 -->
+        <div class="h-[500px] rounded-[32px] overflow-hidden bg-[#F8F9FA] media-hover">
+            <img
+                src="assets/thanhvien_cptx_3.jpg"
+                alt="EpicSport Detail 2"
+                class="w-full h-full object-contain transition duration-500 hover:scale-105">
+        </div>
+
+    </div>
+
 </div>
 </div>
 </div>
 </section>
+<!-- EpicSport Section: Media Left (Alternated) -->
+<section class="py-32 lg:py-40 bg-white overflow-hidden">
+<div class="container mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row-reverse gap-16 lg:gap-24 items-start">
+<!-- Content Block -->
+<div class="lg:w-1/2 space-y-12 reveal-on-scroll visible"><div class="space-y-8">
+<div class="space-y-4">
+<span class="text-dynamic-pink font-bold tracking-[0.3em] text-xs uppercase block">INTRODUCTION</span>
+<h2 class="text-5xl lg:text-6xl font-headline-lg font-extrabold text-deep-navy leading-[1.1]">EpicSport</h2>
+<p class="text-body-lg text-slate-gray leading-relaxed font-inter">
+            EPICSPORT không chỉ là đơn vị phân phối thời trang thể thao, mà còn là cầu nối giữa các thương hiệu, đối tác và cộng đồng yêu thể thao tại Việt Nam.
+        </p>
+</div>
+<!-- OUR MISSION: Full-width feature card -->
+<div class="premium-card bg-surface p-8 rounded-3xl border border-outline-variant/20">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-dynamic-pink text-3xl">bolt</span>
+<div class="space-y-2">
+<h4 class="font-bold text-deep-navy uppercase text-sm tracking-widest">Our Mission</h4>
+<p class="text-slate-gray text-sm leading-relaxed font-inter">
+                    Với định hướng phát triển hệ sinh thái Training &amp; Pickleball, EPICSPORT kiến tạo những trải nghiệm kết nối, thúc đẩy sự hợp tác và lan tỏa tinh thần thể thao tích cực. Mỗi hoạt động, mỗi sự kiện và mỗi mối quan hệ hợp tác đều hướng đến mục tiêu chung: xây dựng một cộng đồng thể thao bền vững, nơi con người cùng rèn luyện, kết nối và phát triển.
+                </p>
+</div>
+</div>
+</div>
+<!-- OUR BRANDS -->
+<div class="space-y-6">
+<p class="text-body-md text-slate-gray leading-relaxed font-inter">
+            EPICSPORT quy tụ những thương hiệu thể thao uy tín, mang đến hệ sinh thái sản phẩm và trải nghiệm toàn diện cho cộng đồng yêu thể thao tại Việt Nam...
+</p>
+<p class="text-body-md text-slate-gray leading-relaxed font-inter">
+Là đối tác phân phối độc quyền ngành hàng Pickleball của Everlast và thương hiệu Hilx tại thị trường Việt Nam, EPICSPORT không ngừng mở rộng danh mục sản phẩm chất lượng quốc tế. Đồng thời, thương hiệu còn phát triển EPIC – thương hiệu riêng được xây dựng với định hướng đồng hành cùng người chơi trên hành trình rèn luyện, thi đấu và theo đuổi phong cách sống năng động.        </p>
+<p class="text-body-md text-slate-gray leading-relaxed font-inter">
+Mỗi thương hiệu trong hệ sinh thái đều được lựa chọn và phát triển với chung một cam kết: mang đến những sản phẩm chất lượng, truyền cảm hứng vận động và góp phần xây dựng cộng đồng thể thao ngày càng phát triển.
+</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Card 1: EVERLAST -->
+<div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-md transition-all border border-outline-variant/10">
+<h5 class="font-bold text-deep-navy mb-1">EVERLAST</h5>
+<p class="text-xs text-slate-gray">Thương hiệu thể thao toàn cầu với hơn một thế kỷ di sản, được EPICSPORT phân phối độc quyền ngành hàng Pickleball tại Việt Nam.</p>
+</div>
+<!-- Card 2: HILX -->
+<div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-md transition-all border border-outline-variant/10">
+<h5 class="font-bold text-deep-navy mb-1">HILX</h5>
+<p class="text-xs text-slate-gray">Thương hiệu phụ kiện và thiết bị thể thao, đáp ứng nhu cầu luyện tập và thi đấu với chất lượng và hiệu năng vượt trội.</p>
+</div>
+<!-- Card 3: EPIC (Featured) -->
+<div class="bg-white p-6 rounded-3xl shadow-sm hover:shadow-md transition-all border border-outline-variant/10 group/brand">
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-gray block mb-2">Our Brand</span>
+<h5 class="font-bold text-deep-navy mb-1">EPIC</h5>
+<p class="text-xs text-slate-gray">Được phát triển bởi EPICSPORT, EPIC mang tinh thần của một thương hiệu thể thao hiện đại – đề cao hiệu năng, chất lượng và đồng hành cùng cộng đồng yêu vận động.</p>
+<p class="text-xs text-slate-gray">Với Epic ra đời như một người bạn đồng hành, không chỉ dừng lại ở việc “chơi cho vui” mà còn nâng tầm trải nghiệm thành những trận đấu thật sự với nhiều khoảnh khắc đáng nhớ: nơi từng cú đánh gắn liền với kỹ thuật, đam mê và cảm giác vỡ òa khi ghi điểm.</p>
+
+</div>
+</div>
+</div>
+</div></div>
+<!-- Media Block -->
+<div class="lg:w-1/2 relative reveal-on-scroll visible"><div class="flex flex-col gap-4">
+<!-- TOP: Hero Video -->
+<div class="w-full aspect-video rounded-[32px] overflow-hidden shadow-lg relative media-hover">
+<video
+    class="w-full h-full object-cover transition duration-500 hover:scale-105"
+    autoplay
+    muted
+    loop
+    playsinline>
+    <source src="assets/thanhvien_epicsport_1.mp4" type="video/mp4">
+</video></div>
+<!-- BOTTOM: Split Section -->
+<div class="flex flex-col gap-4">
+
+    <!-- Ảnh lớn nằm ngang phía trên -->
+    <div class="w-full h-[370px] rounded-[32px] overflow-hidden shadow-lg media-hover">
+        <img
+            src="assets/thanhvien_epicsport_2.jpg"
+            alt="Performance Gear"
+            class="w-full h-full object-cover transition duration-500 hover:scale-105">
+    </div>
+
+    <!-- Hai ảnh bên dưới -->
+    <div class="grid grid-cols-2 gap-4 h-[220px]">
+
+        <div class="rounded-[32px] overflow-hidden shadow-md media-hover">
+            <img
+                src="assets/thanhvien_epicsport_3.jpg"
+                alt="Sport Detail 1"
+                class="w-full h-full object-cover transition duration-500 hover:scale-105">
+        </div>
+
+        <div class="rounded-[32px] overflow-hidden shadow-md media-hover">
+            <img
+                src="assets/thanhvien_epicsport_4.jpg"
+                alt="Sport Detail 2"
+                class="w-full h-full object-cover transition duration-500 hover:scale-105">
+        </div>
+
+    </div>
+
+</div>
+</div></div>
+</div>
+</div>
+</section>
+<!-- Trường Thắng Corp Section: Media Right -->
+<section class="py-32 lg:py-40 bg-surface overflow-hidden">
+<div class="container mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+<!-- Content Block -->
+<div class="lg:w-1/2 space-y-12 reveal-on-scroll visible">
+<div class="space-y-6">
+<span class="text-dynamic-pink font-bold tracking-[0.3em] text-xs uppercase block">Introduction</span>
+<h2 class="text-5xl lg:text-6xl font-headline-lg font-extrabold text-deep-navy leading-[1.1]">Trường Thắng Corp</h2>
+<div class="space-y-4">
+<p class="text-body-lg text-slate-gray leading-relaxed">
+    Trường Thắng là đơn vị sản xuất của Couple Group, được xây dựng với định hướng trở thành đối tác tin cậy trong ngành may mặc, đồng hành cùng các thương hiệu trong và ngoài nước.
+</p>
+
+<p class="text-body-lg text-slate-gray leading-relaxed">
+    Với năng lực sản xuất theo mô hình <strong>FOB, OEM và ODM</strong>, Trường Thắng cung cấp giải pháp toàn diện từ phát triển sản phẩm, tìm nguồn nguyên phụ liệu, sản xuất đến kiểm soát chất lượng. Mỗi sản phẩm được tạo nên từ sự kết hợp giữa kỹ thuật, kinh nghiệm và tinh thần cải tiến không ngừng, đáp ứng những yêu cầu ngày càng cao của thị trường.
+</p>
+
+<p class="text-body-lg text-slate-gray leading-relaxed">
+    Không chỉ tạo ra sản phẩm, Trường Thắng góp phần kiến tạo giá trị bền vững thông qua năng lực sản xuất ổn định, chất lượng nhất quán và những mối quan hệ hợp tác lâu dài với khách hàng và đối tác.
+</p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-6">
+
+    <!-- OUR MISSION -->
+    <div class="premium-card bg-white p-8 rounded-2xl">
+        <span class="material-symbols-outlined text-dynamic-pink text-4xl mb-4">
+            handshake
+        </span>
+
+        <h4 class="font-bold text-deep-navy mb-4 uppercase text-sm tracking-widest">
+            Our Mission
+        </h4>
+
+        <p class="text-slate-gray text-sm leading-relaxed mb-4">
+            Trường Thắng theo đuổi mục tiêu xây dựng một môi trường sản xuất
+            chuyên nghiệp, nơi chất lượng được tạo nên từ kỷ luật, sự tận tâm
+            và tinh thần không ngừng cải tiến.
+        </p>
+
+        <p class="text-slate-gray text-sm leading-relaxed">
+            Mỗi đơn hàng không chỉ là một quy trình sản xuất, mà còn là cam kết
+            về tiến độ, chất lượng và sự tin cậy – những giá trị đã và đang tạo
+            nên uy tín của Trường Thắng trên hành trình đồng hành cùng các
+            thương hiệu.
+        </p>
+    </div>
+
+    <!-- OUR CAPABILITIES -->
+    <div class="premium-card bg-white p-8 rounded-2xl">
+
+        <span class="material-symbols-outlined text-deep-navy text-4xl mb-4">
+            factory
+        </span>
+
+        <h4 class="font-bold text-deep-navy mb-4 uppercase text-sm tracking-widest">
+            Our Capabilities
+        </h4>
+
+        <p class="text-slate-gray text-sm leading-relaxed mb-5">
+            Trường Thắng cung cấp giải pháp sản xuất toàn diện, đáp ứng đa dạng
+            nhu cầu của khách hàng trong nước và quốc tế.
+        </p>
+
+        <ul class="space-y-3 text-sm text-slate-gray list-disc pl-5">
+            <li><strong>FOB</strong> – Phát triển và sản xuất sản phẩm trọn gói.</li>
+            <li><strong>OEM</strong> – Sản xuất theo thiết kế và tiêu chuẩn của khách hàng.</li>
+            <li><strong>ODM</strong> – Đồng hành từ ý tưởng, thiết kế đến hoàn thiện sản phẩm.</li>
+            <li>Phát triển mẫu và tư vấn kỹ thuật.</li>
+            <li>Quản lý chất lượng xuyên suốt quy trình sản xuất.</li>
+            <li>Đáp ứng linh hoạt các đơn hàng cho thị trường nội địa và xuất khẩu.</li>
+        </ul>
+
+    </div>
+
+    <!-- MANUFACTURING EXCELLENCE -->
+    <div class="premium-card bg-gradient-to-r from-deep-navy to-[#0b4f8c] text-white p-8 rounded-2xl">
+
+        <div class="flex items-start gap-4">
+
+            <span class="material-symbols-outlined text-green-300 text-4xl">
+                manufacturing
+            </span>
+
+            <div>
+
+                <h4 class="font-bold uppercase text-sm tracking-widest mb-3">
+                    Manufacturing Excellence
+                </h4>
+
+                <p class="text-white/90 text-sm leading-relaxed mb-4">
+                    Tại Trường Thắng, năng lực sản xuất không chỉ được đo bằng
+                    công suất, mà còn bằng sự ổn định, tính chính xác và khả
+                    năng đáp ứng những tiêu chuẩn ngày càng cao của thị trường.
+                </p>
+
+                <p class="text-white/80 text-sm leading-relaxed">
+                    Đó là nền tảng để Trường Thắng không ngừng nâng cao chất
+                    lượng, tối ưu quy trình và xây dựng niềm tin bền vững với
+                    khách hàng, đối tác và các thương hiệu đồng hành.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+<!-- Media Block -->
+<div class="lg:w-1/2 relative reveal-on-scroll visible"><div class="flex flex-col gap-4">
+    <!-- TOP: Hero Video -->
+    <div class="w-full h-[800px] rounded-[32px] overflow-hidden shadow-lg media-hover">
+    <img
+        src="assets/truongthang_trangchu.webp"
+        alt="Trường Thắng Manufacturing"
+        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+</div>
+    <!-- BOTTOM: Split Section -->
+    <div class="flex flex-col gap-4">
+
+    <!-- Ảnh lớn nằm ngang phía trên -->
+    <div class="w-full h-[370px] rounded-[32px] overflow-hidden shadow-lg media-hover">
+        <img
+            src="assets/truongthang_thanhvien.webp"
+            alt="Performance Gear"
+            class="w-full h-full object-cover transition duration-500 hover:scale-105">
+    </div>
+
+    <!-- Hai ảnh bên dưới -->
+    <div class="grid grid-cols-2 gap-4 h-[220px]">
+
+        <div class="rounded-[32px] overflow-hidden shadow-md media-hover">
+            <img
+                src="assets/truongthang_thanhvien1.webp"
+                alt="Sport Detail 1"
+                class="w-full h-full object-cover transition duration-500 hover:scale-105">
+        </div>
+
+        <div class="rounded-[32px] overflow-hidden shadow-md media-hover">
+            <img
+                src="assets/tuongthang_thanhvien2.webp"
+                alt="Sport Detail 2"
+                class="w-full h-full object-cover transition duration-500 hover:scale-105">
+        </div>
+
+    </div>
+
+</div>
+</div></div>
+</div>
+</div>
+</section>
+</div>
 <!-- CTA Section -->
 <section class="bg-primary-container py-24">
 <div class="max-w-4xl mx-auto px-margin-desktop text-center">

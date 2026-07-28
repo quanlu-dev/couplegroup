@@ -80,6 +80,7 @@
                             "gutter": "24px"
                         },
                         "fontFamily": {
+                            montserrat: ["Montserrat"],
                             "body-md": ["Inter"],
                             "body-lg": ["Inter"],
                             "display-lg-mobile": ["Montserrat"],
@@ -136,7 +137,7 @@
     <img
         alt="Couple Group Logo"
         class="w-auto h-10 lg:h-12 object-contain"
-        src="logo-removebg-preview.png"
+        src="assets/logo-removebg-preview.png"
     />
     <span class="ml-3 font-montserrat text-lg lg:text-2xl font-bold text-ink-black tracking-tight">
         Couple Group
@@ -173,7 +174,7 @@
     <div class="flex items-center justify-between p-6 border-b">
 
         <div class="flex items-center">
-            <img src="logo-removebg-preview.png"
+            <img src="assets/logo-removebg-preview.png"
                  class="h-8 w-auto">
             <span class="ml-3 font-bold text-ink-black">
                 Couple Group
@@ -218,21 +219,25 @@
 
 </div>
 </header>
-<main class="pt-20">
+<main>
 <!-- Hero Section -->
-<header class="relative w-full h-[85vh] flex items-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img alt="Hero Background" class="w-full h-full object-cover" src="slideshow_1.webp"/>
-<div class="absolute inset-0 hero-overlay"></div>
+<section class="relative flex flex-col lg:flex-row items-center justify-start overflow-hidden bg-white pt-32 pb-16 lg:py-44 h-auto lg:h-[700px]">
+<div class="relative lg:absolute lg:top-[70px] lg:-right-0 w-full lg:w-[60%] h-auto lg:h-[calc(100%-110px)] z-0 lg:rounded-[40px] overflow-hidden order-2 lg:order-none mt-12 lg:mt-0">
+<img alt="Hero Background" class="w-full h-full object-contain" src="assets/slideshow_1.webp"/>
 </div>
-<div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
-<div class="max-w-2xl text-soft-white space-y-6">
-<span class="inline-block px-4 py-1.5 bg-dynamic-pink/20 border border-dynamic-pink/30 rounded-full font-label-md text-label-md tracking-wider">CHÚNG TÔI LÀ MỘT</span>
-<h1 class="font-display-lg text-display-lg leading-tight">Văn hóa Couple Group</h1>
-<p class="font-body-lg text-body-lg text-white/90 leading-relaxed">
-                    Xây dựng môi trường làm việc chuyên nghiệp, hiệu quả và đầy cảm hứng, nơi mỗi cá nhân được khơi nguồn đam mê để kiến tạo những giá trị bền vững cho cộng đồng.
-                </p>
-<div class="flex gap-4 pt-4">
+<div class="container mx-auto px-margin-desktop relative z-10 order-1 lg:order-none">
+<div class="max-w-2xl hero-title-entrance text-left ml-0">
+<span class="inline-block px-4 py-1 bg-dynamic-pink text-white rounded-full font-bold mb-4 tracking-[0.2em] uppercase text-[10px]">Couple Group DNA</span>
+<h1 class="font-montserrat font-extrabold leading-[1.1] editorial-text uppercase text-[#243447]">
+    <span class="block text-[44px] lg:text-[50px]">
+        Couple Group DNA
+    </span>
+
+    <span class="block text-dynamic-pink italic text-[28px] lg:text-[30px] mt-2 normal-case">
+        Swan Sprit - Tinh thần Thiên Nga
+    </span>
+</h1>
+<div class="flex flex-wrap gap-5 justify-start mt-10">
 <a href="#culture-content"
    class="bg-dynamic-pink text-soft-white px-8 py-4 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:bg-opacity-90 transition-all">
     Khám phá môi trường
@@ -241,7 +246,8 @@
 </div>
 </div>
 </div>
-</header>
+<!-- Floating Decorative Images -->
+</section>
 
 
 <!-- Redesigned Pillar: Hoạt động Đào tạo -->
@@ -254,7 +260,7 @@
 <!-- Hero Image Block -->
 <div class="flex flex-col items-center mb-24">
 <div class="w-full md:w-[70%] mb-8">
-<img alt="Training Hero" class="w-full h-auto rounded-[24px] shadow-lg object-cover" src="page_vanhoa_1.jpg"/>
+<img alt="Training Hero" class="w-full h-auto rounded-[24px] shadow-lg object-cover" src="assets/page_vanhoa_1.jpg"/>
 </div>
 <div class="text-center max-w-2xl px-4">
 <h4 class="font-headline-lg text-headline-lg text-deep-navy font-bold uppercase mb-4 font-display-lg">COUPLE GROUP</h4>
@@ -268,7 +274,7 @@
 <!-- Card 1 -->
 <div class="group transition-all duration-300 hover:-translate-y-2">
 <div class="aspect-[4/3] overflow-hidden rounded-xl mb-6">
-<img alt="Professional Workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="page_vanhoa_2.webp"/>
+<img alt="Professional Workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="assets/page_vanhoa_2.webp"/>
 </div>
 <h5 class="font-headline-md text-headline-md text-deep-navy mb-2">Đào tạo Chuyên sâu</h5>
 <p class="font-body-md text-on-surface-variant line-clamp-2">Các buổi workshop cùng chuyên gia đầu ngành giúp nâng cao tay nghề và cập nhật xu hướng thời trang thế giới.</p>
@@ -276,7 +282,7 @@
 <!-- Card 2 -->
 <div class="group transition-all duration-300 hover:-translate-y-2">
 <div class="aspect-[4/3] overflow-hidden rounded-xl mb-6">
-<img alt="Soft Skills Training" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="page_vanhoa_3.jpg"/>
+<img alt="Soft Skills Training" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="assets/page_vanhoa_3.jpg"/>
 </div>
 <h5 class="font-headline-md text-headline-md text-deep-navy mb-2">Phát triển Kỹ năng Mềm</h5>
 <p class="font-body-md text-on-surface-variant line-clamp-2">Xây dựng nền tảng vững chắc về tư duy dịch vụ, giao tiếp và quản trị thời gian hiệu quả.</p>
@@ -284,7 +290,7 @@
 <!-- Card 3 -->
 <div class="group transition-all duration-300 hover:-translate-y-2">
 <div class="aspect-[4/3] overflow-hidden rounded-xl mb-6">
-<img alt="Mentoring" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="page_vanhoa_4.webp"/>
+<img alt="Mentoring" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="assets/page_vanhoa_4.webp"/>
 </div>
 <h5 class="font-headline-md text-headline-md text-deep-navy mb-2">Chương trình Mentoring</h5>
 <p class="font-body-md text-on-surface-variant line-clamp-2">Dòng chảy tri thức từ các quản lý giàu kinh nghiệm đến những tài năng trẻ triển vọng.</p>
@@ -292,7 +298,7 @@
 <!-- Card 4 -->
 <div class="group transition-all duration-300 hover:-translate-y-2">
 <div class="aspect-[4/3] overflow-hidden rounded-xl mb-6">
-<img alt="Onboarding" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="page_vanhoa_5.webp"/>
+<img alt="Onboarding" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="assets/page_vanhoa_5.webp"/>
 </div>
 <h5 class="font-headline-md text-headline-md text-deep-navy mb-2">Hội nhập Văn hóa</h5>
 <p class="font-body-md text-on-surface-variant line-clamp-2">Giúp nhân sự mới nhanh chóng hòa nhập và thấu hiểu các giá trị cốt lõi của đại gia đình Couple Group.</p>
