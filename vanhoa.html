@@ -125,6 +125,49 @@
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
         }
+        .card-hover:hover .card-icon {
+            animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        .reveal-hidden {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Carousel Refactoring Styles */
+        .carousel-viewport {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            cursor: grab;
+        }
+        .carousel-viewport:active {
+            cursor: grabbing;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 600ms ease-in-out;
+            will-change: transform;
+        }
+        .carousel-slide {
+            flex: 0 0 70%;
+            padding: 0 16px;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .carousel-slide { flex: 0 0 60%; }
+        }
+        @media (min-width: 1024px) {
+            .carousel-slide { flex: 0 0 45%; }
+        }
     </style>
 </head>
 <body class="bg-surface-bright text-on-surface font-body-md selection:bg-dynamic-pink selection:text-white overflow-x-hidden pb-0">
@@ -252,62 +295,151 @@
 
 
 <!-- Redesigned Pillar: Hoạt động Đào tạo -->
-<section id="culture-content" class="py-24 bg-surface-container-low">
+<section class="py-24 bg-white reveal-hidden">
 <div class="px-margin-desktop max-w-container-max mx-auto">
-<!-- Section Title Only -->
-<div class="text-center mb-16">
-<h3 class="font-display-lg text-headline-lg text-deep-navy">Hoạt động Couple Group</h3>
-</div>
-<!-- Hero Image Block -->
-<div class="flex flex-col items-center mb-24">
-<div class="w-full md:w-[70%] mb-8">
-<img alt="Training Hero" class="w-full h-auto rounded-[24px] shadow-lg object-cover" src="assets/page_vanhoa_1.jpg"/>
-</div>
-<div class="text-center max-w-2xl px-4">
-<h4 class="font-headline-lg text-headline-lg text-deep-navy font-bold uppercase mb-4 font-display-lg">COUPLE GROUP</h4>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed italic">
-          Chúng tôi kiến tạo một hệ sinh thái học tập không giới hạn, nơi tri thức là chìa khóa để mỗi cá nhân khai phá tiềm năng tối đa và cùng tổ chức vươn tới những đỉnh cao mới.
-        </p>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+<div class="lg:col-span-5 space-y-6">
+<span class="text-dynamic-pink font-bold tracking-widest uppercase text-label-md">KHỞI NGUỒN</span>
+<h2 class="font-display-lg text-headline-lg text-primary uppercase font-bold">TINH THẦN THIÊN NGA</h2>
+<p class="text-headline-md text-deep-navy/70 font-medium italic leading-tight">Kiêu hãnh đồng hành – Bền bỉ vươn xa</p>
+<div class="space-y-4 text-slate-gray font-body-md leading-relaxed">
+<p>Mỗi tổ chức đều có một bản sắc. Với Couple Group, đó là Tinh thần Thiên Nga – "Kiêu hãnh đồng hành – Bền bỉ vươn xa".</p>
+<p>Thiên Nga không chỉ là biểu tượng của sự thanh lịch, mà còn là hiện thân của ý chí bền bỉ trên những hành trình dài. Đó cũng là tinh thần mà Couple Group luôn gìn giữ: kiên định với mục tiêu, sẵn sàng đổi mới, đồng hành cùng nhau và không ngừng vươn tới những giá trị tốt đẹp hơn.</p>
+<p>Tinh thần ấy không chỉ định hướng cách phát triển doanh nghiệp, mà còn là nguồn cảm hứng để mỗi thành viên cùng tiến về một mục tiêu chung.</p>
 </div>
 </div>
-<!-- Gallery Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-[32px]">
-<!-- Card 1 -->
-<div class="group transition-all duration-300 hover:-translate-y-2">
-<div class="aspect-[4/3] overflow-hidden rounded-xl mb-6">
-<img alt="Professional Workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="assets/page_vanhoa_2.webp"/>
+<div class="lg:col-span-7">
+<div class="w-full h-auto overflow-hidden rounded-[32px] shadow-2xl">
+<img alt="Tinh thần Thiên Nga" class="w-full h-full object-cover" src="assets/slideshow_1.webp"/>
 </div>
-<h5 class="font-headline-md text-headline-md text-deep-navy mb-2">Đào tạo Chuyên sâu</h5>
-<p class="font-body-md text-on-surface-variant line-clamp-2">Các buổi workshop cùng chuyên gia đầu ngành giúp nâng cao tay nghề và cập nhật xu hướng thời trang thế giới.</p>
-</div>
-<!-- Card 2 -->
-<div class="group transition-all duration-300 hover:-translate-y-2">
-<div class="aspect-[4/3] overflow-hidden rounded-xl mb-6">
-<img alt="Soft Skills Training" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="assets/page_vanhoa_3.jpg"/>
-</div>
-<h5 class="font-headline-md text-headline-md text-deep-navy mb-2">Phát triển Kỹ năng Mềm</h5>
-<p class="font-body-md text-on-surface-variant line-clamp-2">Xây dựng nền tảng vững chắc về tư duy dịch vụ, giao tiếp và quản trị thời gian hiệu quả.</p>
-</div>
-<!-- Card 3 -->
-<div class="group transition-all duration-300 hover:-translate-y-2">
-<div class="aspect-[4/3] overflow-hidden rounded-xl mb-6">
-<img alt="Mentoring" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="assets/page_vanhoa_4.webp"/>
-</div>
-<h5 class="font-headline-md text-headline-md text-deep-navy mb-2">Chương trình Mentoring</h5>
-<p class="font-body-md text-on-surface-variant line-clamp-2">Dòng chảy tri thức từ các quản lý giàu kinh nghiệm đến những tài năng trẻ triển vọng.</p>
-</div>
-<!-- Card 4 -->
-<div class="group transition-all duration-300 hover:-translate-y-2">
-<div class="aspect-[4/3] overflow-hidden rounded-xl mb-6">
-<img alt="Onboarding" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" src="assets/page_vanhoa_5.webp"/>
-</div>
-<h5 class="font-headline-md text-headline-md text-deep-navy mb-2">Hội nhập Văn hóa</h5>
-<p class="font-body-md text-on-surface-variant line-clamp-2">Giúp nhân sự mới nhanh chóng hòa nhập và thấu hiểu các giá trị cốt lõi của đại gia đình Couple Group.</p>
 </div>
 </div>
 </div>
 </section>
+<!-- SECTION 2: SWAN SPIRIT -->
+<section class="py-24 bg-surface-container-low reveal-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto text-center mb-16">
+<div class=" mx-auto space-y-6">
+<span class="text-dynamic-pink font-bold tracking-widest uppercase text-label-md">GIÁ TRỊ CỐT LÕI</span>
+<h2 class="font-display-lg text-display-lg text-primary uppercase font-bold">SWAN SPIRIT</h2>
+<p class="text-headline-md text-deep-navy/70 font-medium italic">Nền tảng của mọi hành động</p>
+<p class="text-slate-gray font-body-md leading-relaxed">
+                        Văn hóa không được tạo nên từ những điều được nói, mà từ những điều được lựa chọn mỗi ngày.<br> SWAN SPIRIT là hệ giá trị cốt lõi định hình cách mỗi thành viên Couple Group suy nghĩ, hành động và đồng hành cùng nhau.<br> Respect – Ownership – Teamwork – Lean – Improving không chỉ là nền tảng trong công việc, mà còn là cam kết để xây dựng một môi trường làm việc<br> chuyên nghiệp, tôn trọng, chủ động và không ngừng cải tiến.
+                    </p>
+</div>
+</div>
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Card: Respect -->
+<div class="card-hover bg-white px-8 py-4 rounded-[24px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+<span class="material-symbols-outlined card-icon text-5xl text-dynamic-pink mb-6">handshake</span>
+<h4 class="font-headline-md text-deep-navy mb-4 font-bold">Respect</h4>
 
+</div>
+<!-- Card: Ownership -->
+<div class="card-hover bg-white px-8 py-4 rounded-[24px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+<span class="material-symbols-outlined card-icon text-5xl text-dynamic-pink mb-6">person_pin_circle</span>
+<h4 class="font-headline-md text-deep-navy mb-4 font-bold">Ownership</h4>
+</div>
+<!-- Card: Teamwork -->
+<div class="card-hover bg-white px-8 py-4 rounded-[24px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+<span class="material-symbols-outlined card-icon text-5xl text-dynamic-pink mb-6">groups_3</span>
+<h4 class="font-headline-md text-deep-navy mb-4 font-bold">Teamwork</h4>
+</div>
+<!-- Card: Lean -->
+<div class="card-hover bg-white px-8 py-4 rounded-[24px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+<span class="material-symbols-outlined card-icon text-5xl text-dynamic-pink mb-6">speed</span>
+<h4 class="font-headline-md text-deep-navy mb-4 font-bold">Lean</h4>
+</div>
+<!-- Card: Improving -->
+<div class="card-hover bg-white px-8 py-4 rounded-[24px] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+<span class="material-symbols-outlined card-icon text-5xl text-dynamic-pink mb-6">trending_up</span>
+<h4 class="font-headline-md text-deep-navy mb-4 font-bold">Improving</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: CON NGƯỜI COUPLE GROUP -->
+<section class="py-24 bg-white reveal-hidden">
+<div class="px-margin-desktop max-w-container-max mx-auto mb-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+<div class="space-y-6">
+<span class="text-dynamic-pink font-bold tracking-widest uppercase text-label-md">CON NGƯỜI</span>
+<h2 class="font-display-lg text-headline-lg text-primary uppercase font-bold">Con người Couple Group</h2>
+<p class="text-headline-md text-deep-navy/70 font-medium italic">Con người là giá trị bền vững nhất</p>
+</div>
+<div>
+<p class="text-slate-gray font-body-md leading-relaxed">
+                            Điều tạo nên Couple Group không chỉ là những sản phẩm hay những cột mốc phát triển, mà là những con người cùng học hỏi, cùng làm việc và cùng trưởng thành mỗi ngày. Chính những trải nghiệm được sẻ chia đã tạo nên một tập thể gắn kết, nơi mỗi cá nhân đều góp phần viết tiếp hành trình của Couple Group.
+                        </p>
+</div>
+</div>
+</div>
+<div class="relative px-margin-desktop max-w-container-max mx-auto group">
+<div class="carousel-viewport" id="carousel-viewport">
+<div class="carousel-track" id="carousel-track">
+<!-- Slide 1 -->
+<div class="carousel-slide">
+<img alt="Team collaboration" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/kickoff.webp"/>
+</div>
+<!-- Slide 2 -->
+<div class="carousel-slide">
+<img alt="Company trip" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_1.jpg"/>
+</div>
+<!-- Slide 3 -->
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_2.webp"/>
+</div>
+<!-- Slide 4 -->
+<div class="carousel-slide">
+<img alt="Excellence awards" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_3.jpg"/>
+</div>
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_4.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_5.webp"/>
+</div>
+</div>
+</div>
+<!-- Carousel Nav -->
+<button class="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-4 rounded-full shadow-lg backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity z-10" id="prevBtn">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-4 rounded-full shadow-lg backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity z-10" id="nextBtn">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- SECTION 4: REDESIGNED CLOSING -->
+<section class="bg-soft-white py-24 md:py-32">
+<!-- Part 1: Text Content -->
+<div class="px-margin-desktop max-w-container-max mx-auto text-center mb-16 md:mb-24 reveal-hidden">
+<div class="max-w-4xl mx-auto space-y-8">
+<h2 class="font-display-lg text-primary text-headline-lg md:text-display-sm leading-tight md:leading-snug italic font-medium">
+                        "Tinh thần Thiên Nga không chỉ được kể bằng lời, mà được viết nên bởi những con người Couple Group."
+                    </h2>
+<p class="font-body-lg text-slate-gray max-w-2xl mx-auto">
+                        Mỗi hành trình, mỗi trải nghiệm và mỗi con người đều góp phần tạo nên bản sắc của Couple Group hôm nay và trong tương lai.
+                    </p>
+<div class="pt-6">
+</div>
+</div>
+</div>
+<!-- Part 2: Cinematic Video -->
+<div class="px-margin-desktop max-w-container-max mx-auto reveal-hidden">
+<div class="w-[85%] mx-auto relative group">
+<div class="aspect-[21/9] w-full overflow-hidden rounded-[32px] shadow-2xl bg-primary/10">
+<!-- Using the previous image as a poster/fallback, assuming a video asset would be here in a real scenario -->
+<video autoplay="" class="w-full h-full object-cover" loop="" muted="" playsinline="" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuDWs9jIVEZk81zZbxwfrxu2G2fGzfca1sj800PeiB2EtclZFBX3vKcgqzUPk5XMX3bDVVIGucYjyX3s2bfaLvKPEBtyMDDQwEuoShEJZDHBb8H0zibVQGxClVtSMpbl_xwJrx8iG38D7wnY8mmzu-vNJ37NYKPqa9YQOxpz59ksF-_2G3LbRUHaQ9Rn0pHTu29zC_bzX_EwgbcH4zlnmDwhog3cFCaBPIzwzZLhPQSs9XvxwgtdbbrA">
+<source src="https://cdn.hstatic.net/files/1000341387/file/videovanhoa.mp4" type="video/mp4"/>
+<!-- Fallback Image if video is missing -->
+<img alt="Cinematic background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWs9jIVEZk81zZbxwfrxu2G2fGzfca1sj800PeiB2EtclZFBX3vKcgqzUPk5XMX3bDVVIGucYjyX3s2bfaLvKPEBtyMDDQwEuoShEJZDHBb8H0zibVQGxClVtSMpbl_xwJrx8iG38D7wnY8mmzu-vNJ37NYKPqa9YQOxpz59ksF-_2G3LbRUHaQ9Rn0pHTu29zC_bzX_EwgbcH4zlnmDwhog3cFCaBPIzwzZLhPQSs9XvxwgtdbbrA"/>
+</video>
+</div>
+</div>
+</div>
+</section>
 
 </main>
 <!-- Footer (Replaced with Footer from SCREEN_2) -->
@@ -422,6 +554,180 @@ document.addEventListener("click", function (e) {
         closeMenu();
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+            // Scroll animations
+            const observerOptions = { threshold: 0.15 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-hidden').forEach(el => observer.observe(el));
+
+            // Refactored Carousel Logic
+            const viewport = document.getElementById('carousel-viewport');
+            const track = document.getElementById('carousel-track');
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            const slides = Array.from(track.children);
+            
+            let currentIndex = 0;
+            let isDragging = false;
+            let startPos = 0;
+            let currentTranslate = 0;
+            let prevTranslate = 0;
+            let animationID = 0;
+            let autoplayInterval;
+            
+            // Clone slides for infinite loop
+            const slideCount = slides.length;
+            slides.forEach(slide => {
+                const cloneFirst = slide.cloneNode(true);
+                const cloneLast = slide.cloneNode(true);
+                track.appendChild(cloneFirst);
+                track.insertBefore(cloneLast, track.firstChild);
+            });
+
+            const allSlides = Array.from(track.children);
+            const totalSlides = allSlides.length;
+            
+            // Initial positioning
+            currentIndex = slideCount; // Start at the first original slide
+            
+            function updateLayout() {
+                const slideWidth = allSlides[0].offsetWidth;
+                currentTranslate = -currentIndex * slideWidth;
+                prevTranslate = currentTranslate;
+                setTrackPosition();
+            }
+
+            function setTrackPosition() {
+                track.style.transform = `translateX(${currentTranslate}px)`;
+            }
+
+            function setTrackTransition(enabled) {
+                track.style.transition = enabled ? 'transform 600ms ease-in-out' : 'none';
+            }
+
+            function moveToIndex(index, animated = true) {
+                setTrackTransition(animated);
+                currentIndex = index;
+                const slideWidth = allSlides[0].offsetWidth;
+                currentTranslate = -currentIndex * slideWidth;
+                prevTranslate = currentTranslate;
+                setTrackPosition();
+            }
+
+            // Handle loop jump
+            track.addEventListener('transitionend', () => {
+                if (currentIndex >= slideCount * 2) {
+                    moveToIndex(slideCount, false);
+                }
+                if (currentIndex <= slideCount - 1) {
+                    moveToIndex(slideCount * 2 - 1, false);
+                }
+            });
+
+            // Navigation
+            nextBtn.addEventListener('click', () => {
+                stopAutoplay();
+                moveToIndex(currentIndex + 1);
+                startAutoplay();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                stopAutoplay();
+                moveToIndex(currentIndex - 1);
+                startAutoplay();
+            });
+
+            // Drag/Swipe Functionality
+            function touchStart(event) {
+                isDragging = true;
+                startPos = getPositionX(event);
+                stopAutoplay();
+                setTrackTransition(false);
+                animationID = requestAnimationFrame(animation);
+            }
+
+            function touchMove(event) {
+                if (!isDragging) return;
+                const currentPosition = getPositionX(event);
+                const diff = currentPosition - startPos;
+                currentTranslate = prevTranslate + diff;
+            }
+
+            function touchEnd() {
+                isDragging = false;
+                cancelAnimationFrame(animationID);
+                
+                const movedBy = currentTranslate - prevTranslate;
+                const slideWidth = allSlides[0].offsetWidth;
+
+                if (movedBy < -slideWidth / 4) {
+                    moveToIndex(currentIndex + 1);
+                } else if (movedBy > slideWidth / 4) {
+                    moveToIndex(currentIndex - 1);
+                } else {
+                    moveToIndex(currentIndex);
+                }
+                
+                startAutoplay();
+            }
+
+            function getPositionX(event) {
+                return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+            }
+
+            function animation() {
+                setTrackPosition();
+                if (isDragging) requestAnimationFrame(animation);
+            }
+
+            // Autoplay Logic
+            function startAutoplay() {
+                autoplayInterval = setInterval(() => {
+                    moveToIndex(currentIndex + 1);
+                }, 4000);
+            }
+
+            function stopAutoplay() {
+                clearInterval(autoplayInterval);
+            }
+
+            // Event Listeners
+            viewport.addEventListener('mousedown', touchStart);
+            viewport.addEventListener('touchstart', touchStart, { passive: true });
+            window.addEventListener('mousemove', touchMove);
+            window.addEventListener('touchmove', touchMove, { passive: true });
+            window.addEventListener('mouseup', touchEnd);
+            window.addEventListener('touchend', touchEnd);
+
+            viewport.addEventListener('mouseenter', stopAutoplay);
+            viewport.addEventListener('mouseleave', startAutoplay);
+
+            // Responsive Handling
+            window.addEventListener('resize', updateLayout);
+            
+            // Initialization
+            setTimeout(() => {
+                updateLayout();
+                startAutoplay();
+            }, 100);
+
+            // Header shrink effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 20) {
+                    header.classList.add('py-2', 'shadow-lg');
+                } else {
+                    header.classList.remove('py-2', 'shadow-lg');
+                }
+            });
+        });
 </script>
 
 
