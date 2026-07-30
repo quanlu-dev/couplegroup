@@ -284,7 +284,7 @@
 <div class="flex flex-wrap gap-5 justify-start mt-10">
 <a href="#culture-content"
    class="bg-dynamic-pink text-soft-white px-8 py-4 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:bg-opacity-90 transition-all">
-    Khám phá môi trường
+    Tinh thần thiên nga
     <span class="material-symbols-outlined">arrow_forward</span>
 </a>
 </div>
@@ -295,7 +295,7 @@
 
 
 <!-- Redesigned Pillar: Hoạt động Đào tạo -->
-<section class="py-24 bg-white reveal-hidden">
+<section id="culture-content" class="py-24 bg-white reveal-hidden">
 <div class="px-margin-desktop max-w-container-max mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 <div class="lg:col-span-5 space-y-6">
@@ -400,6 +400,30 @@
 <div class="carousel-slide">
 <img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_5.webp"/>
 </div>
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_6.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_7.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_8.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_9.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_10.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_11.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_12.webp"/>
+</div>
+<div class="carousel-slide">
+<img alt="Learning session" class="w-full aspect-video object-cover rounded-[32px] shadow-lg pointer-events-none" src="assets/page_vanhoa_13.webp"/>
+</div>
 </div>
 </div>
 <!-- Carousel Nav -->
@@ -428,15 +452,17 @@
 </div>
 <!-- Part 2: Cinematic Video -->
 <div class="px-margin-desktop max-w-container-max mx-auto reveal-hidden">
-<div class="w-[85%] mx-auto relative group">
-<div class="aspect-[21/9] w-full overflow-hidden rounded-[32px] shadow-2xl bg-primary/10">
-<!-- Using the previous image as a poster/fallback, assuming a video asset would be here in a real scenario -->
-<video autoplay="" class="w-full h-full object-cover" loop="" muted="" playsinline="" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuDWs9jIVEZk81zZbxwfrxu2G2fGzfca1sj800PeiB2EtclZFBX3vKcgqzUPk5XMX3bDVVIGucYjyX3s2bfaLvKPEBtyMDDQwEuoShEJZDHBb8H0zibVQGxClVtSMpbl_xwJrx8iG38D7wnY8mmzu-vNJ37NYKPqa9YQOxpz59ksF-_2G3LbRUHaQ9Rn0pHTu29zC_bzX_EwgbcH4zlnmDwhog3cFCaBPIzwzZLhPQSs9XvxwgtdbbrA">
-<source src="https://cdn.hstatic.net/files/1000341387/file/videovanhoa.mp4" type="video/mp4"/>
-<!-- Fallback Image if video is missing -->
-<img alt="Cinematic background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWs9jIVEZk81zZbxwfrxu2G2fGzfca1sj800PeiB2EtclZFBX3vKcgqzUPk5XMX3bDVVIGucYjyX3s2bfaLvKPEBtyMDDQwEuoShEJZDHBb8H0zibVQGxClVtSMpbl_xwJrx8iG38D7wnY8mmzu-vNJ37NYKPqa9YQOxpz59ksF-_2G3LbRUHaQ9Rn0pHTu29zC_bzX_EwgbcH4zlnmDwhog3cFCaBPIzwzZLhPQSs9XvxwgtdbbrA"/>
-</video>
-</div>
+<div class="w-full lg:w-[85%] lg:mx-auto relative group">
+    <div class="aspect-video lg:aspect-[21/9] w-full overflow-hidden rounded-[24px] lg:rounded-[32px] shadow-2xl bg-primary/10">
+        <video
+            class="w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline>
+            <source src="https://cdn.hstatic.net/files/1000341387/file/activities_end_dna.mp4" type="video/mp4">
+        </video>
+    </div>
 </div>
 </div>
 </section>
@@ -567,157 +593,158 @@ document.addEventListener('DOMContentLoaded', () => {
 
             document.querySelectorAll('.reveal-hidden').forEach(el => observer.observe(el));
 
-            // Refactored Carousel Logic
-            const viewport = document.getElementById('carousel-viewport');
-            const track = document.getElementById('carousel-track');
-            const nextBtn = document.getElementById('nextBtn');
-            const prevBtn = document.getElementById('prevBtn');
-            const slides = Array.from(track.children);
-            
-            let currentIndex = 0;
-            let isDragging = false;
-            let startPos = 0;
-            let currentTranslate = 0;
-            let prevTranslate = 0;
-            let animationID = 0;
-            let autoplayInterval;
-            
-            // Clone slides for infinite loop
-            const slideCount = slides.length;
-            slides.forEach(slide => {
-                const cloneFirst = slide.cloneNode(true);
-                const cloneLast = slide.cloneNode(true);
-                track.appendChild(cloneFirst);
-                track.insertBefore(cloneLast, track.firstChild);
-            });
+            // =======================
+// Carousel (Foundation Style)
+// =======================
 
-            const allSlides = Array.from(track.children);
-            const totalSlides = allSlides.length;
-            
-            // Initial positioning
-            currentIndex = slideCount; // Start at the first original slide
-            
-            function updateLayout() {
-                const slideWidth = allSlides[0].offsetWidth;
-                currentTranslate = -currentIndex * slideWidth;
-                prevTranslate = currentTranslate;
-                setTrackPosition();
-            }
+const viewport = document.getElementById("carousel-viewport");
+const track = document.getElementById("carousel-track");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
 
-            function setTrackPosition() {
-                track.style.transform = `translateX(${currentTranslate}px)`;
-            }
+const slides = [...track.children];
 
-            function setTrackTransition(enabled) {
-                track.style.transition = enabled ? 'transform 600ms ease-in-out' : 'none';
-            }
+slides.forEach(slide => {
+    track.appendChild(slide.cloneNode(true));
+});
 
-            function moveToIndex(index, animated = true) {
-                setTrackTransition(animated);
-                currentIndex = index;
-                const slideWidth = allSlides[0].offsetWidth;
-                currentTranslate = -currentIndex * slideWidth;
-                prevTranslate = currentTranslate;
-                setTrackPosition();
-            }
+let isDragging = false;
+let startX = 0;
+let startTranslate = 0;
 
-            // Handle loop jump
-            track.addEventListener('transitionend', () => {
-                if (currentIndex >= slideCount * 2) {
-                    moveToIndex(slideCount, false);
-                }
-                if (currentIndex <= slideCount - 1) {
-                    moveToIndex(slideCount * 2 - 1, false);
-                }
-            });
+let currentTranslate = 0;
 
-            // Navigation
-            nextBtn.addEventListener('click', () => {
-                stopAutoplay();
-                moveToIndex(currentIndex + 1);
-                startAutoplay();
-            });
+let autoScroll = true;
 
-            prevBtn.addEventListener('click', () => {
-                stopAutoplay();
-                moveToIndex(currentIndex - 1);
-                startAutoplay();
-            });
+function getSlideWidth() {
+    return track.children[0].offsetWidth;
+}
 
-            // Drag/Swipe Functionality
-            function touchStart(event) {
-                isDragging = true;
-                startPos = getPositionX(event);
-                stopAutoplay();
-                setTrackTransition(false);
-                animationID = requestAnimationFrame(animation);
-            }
+function getOriginalWidth() {
+    return getSlideWidth() * slides.length;
+}
 
-            function touchMove(event) {
-                if (!isDragging) return;
-                const currentPosition = getPositionX(event);
-                const diff = currentPosition - startPos;
-                currentTranslate = prevTranslate + diff;
-            }
+function render() {
 
-            function touchEnd() {
-                isDragging = false;
-                cancelAnimationFrame(animationID);
-                
-                const movedBy = currentTranslate - prevTranslate;
-                const slideWidth = allSlides[0].offsetWidth;
+    if (autoScroll && !isDragging) {
 
-                if (movedBy < -slideWidth / 4) {
-                    moveToIndex(currentIndex + 1);
-                } else if (movedBy > slideWidth / 4) {
-                    moveToIndex(currentIndex - 1);
-                } else {
-                    moveToIndex(currentIndex);
-                }
-                
-                startAutoplay();
-            }
+        currentTranslate -= 0.35;
 
-            function getPositionX(event) {
-                return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-            }
+        if (Math.abs(currentTranslate) >= getOriginalWidth()) {
+            currentTranslate = 0;
+        }
 
-            function animation() {
-                setTrackPosition();
-                if (isDragging) requestAnimationFrame(animation);
-            }
+    }
 
-            // Autoplay Logic
-            function startAutoplay() {
-                autoplayInterval = setInterval(() => {
-                    moveToIndex(currentIndex + 1);
-                }, 4000);
-            }
+    track.style.transition = "none";
+    track.style.transform = `translateX(${currentTranslate}px)`;
 
-            function stopAutoplay() {
-                clearInterval(autoplayInterval);
-            }
+    requestAnimationFrame(render);
+}
 
-            // Event Listeners
-            viewport.addEventListener('mousedown', touchStart);
-            viewport.addEventListener('touchstart', touchStart, { passive: true });
-            window.addEventListener('mousemove', touchMove);
-            window.addEventListener('touchmove', touchMove, { passive: true });
-            window.addEventListener('mouseup', touchEnd);
-            window.addEventListener('touchend', touchEnd);
+requestAnimationFrame(render);
 
-            viewport.addEventListener('mouseenter', stopAutoplay);
-            viewport.addEventListener('mouseleave', startAutoplay);
 
-            // Responsive Handling
-            window.addEventListener('resize', updateLayout);
-            
-            // Initialization
-            setTimeout(() => {
-                updateLayout();
-                startAutoplay();
-            }, 100);
+// =======================
+// Drag
+// =======================
 
+function dragStart(e){
+
+    isDragging = true;
+    autoScroll = false;
+
+    startX = e.type.includes("mouse")
+        ? e.pageX
+        : e.touches[0].pageX;
+
+    startTranslate = currentTranslate;
+
+}
+
+function dragMove(e){
+
+    if(!isDragging) return;
+
+    const x = e.type.includes("mouse")
+        ? e.pageX
+        : e.touches[0].pageX;
+
+    currentTranslate = startTranslate + (x-startX);
+
+}
+
+function dragEnd(){
+
+    if(!isDragging) return;
+
+    isDragging = false;
+    autoScroll = true;
+
+}
+
+viewport.addEventListener("mousedown",dragStart);
+window.addEventListener("mousemove",dragMove);
+window.addEventListener("mouseup",dragEnd);
+
+viewport.addEventListener("touchstart",dragStart,{passive:true});
+window.addEventListener("touchmove",dragMove,{passive:true});
+window.addEventListener("touchend",dragEnd);
+
+
+// =======================
+// Pause khi hover
+// =======================
+
+viewport.addEventListener("mouseenter",()=>autoScroll=false);
+
+viewport.addEventListener("mouseleave",()=>{
+
+    if(!isDragging){
+        autoScroll=true;
+    }
+
+});
+
+
+// =======================
+// Prev Next
+// =======================
+
+function move(direction){
+
+    autoScroll=false;
+
+    const width=getSlideWidth();
+
+    currentTranslate+=direction*width;
+
+    track.style.transition="transform .45s ease";
+    track.style.transform=`translateX(${currentTranslate}px)`;
+
+    setTimeout(()=>{
+
+        track.style.transition="none";
+
+        if(Math.abs(currentTranslate)>=getOriginalWidth()){
+            currentTranslate=0;
+        }
+
+        autoScroll=true;
+
+    },450);
+
+}
+
+nextBtn.onclick=()=>move(-1);
+
+prevBtn.onclick=()=>move(1);
+
+window.addEventListener("resize",()=>{
+
+    track.style.transition="none";
+
+});
             // Header shrink effect
             window.addEventListener('scroll', () => {
                 const header = document.querySelector('header');
